@@ -11,3 +11,13 @@ var g_user = {
 	tracks: [],
 	likes: []
 };
+
+/**
+ *	Stores data about the settings.
+ */ 
+var g_settings = {
+	follower_slider = {
+		min: null,
+		max: null
+	}
+}

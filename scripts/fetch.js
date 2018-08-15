@@ -13,7 +13,8 @@ function fetchUser(username){
         g_user.id = user.id; 
         g_user.permalink = user.permalink;
         g_user.username = user.username;
-        g_user.follower_count = user.follower_count;
+        g_user.follower_count = user.followers_count;
+        g_user.image = user.avatar_url;
         fetchTracks(user.id);
         fetchFollowings(`https://api.soundcloud.com/users/${user.id}/followings?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd&limit=200`);   
     });       

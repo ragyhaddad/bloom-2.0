@@ -16,7 +16,7 @@ var g_user = {
  *	Stores data about the settings.
  */ 
 var g_settings = {
-	follower_slider : {
+	follower_slider: {
 		min: null,
 		max: null
 	}

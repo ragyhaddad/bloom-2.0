@@ -1,0 +1,9 @@
+.logo-watermark{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	width: 150px;
+	padding: 40px;
+	opacity: 0.15;
+	z-index: 5;
+}

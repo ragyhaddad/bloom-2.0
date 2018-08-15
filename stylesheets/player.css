@@ -1,0 +1,12 @@
+.media-player{
+	position: fixed;
+	bottom: 20px;
+	left: 324px;
+	transform: translate3d(0px, 240px, 0px);
+	opacity: 0;
+	transition: transform 0.5s, opacity 0.5s;
+	z-index: 10;
+}
+.media-player iframe{
+	margin-bottom: -3px;
+}

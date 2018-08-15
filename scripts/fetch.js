@@ -1,9 +1,13 @@
+// Testing 
+fetchUser('flume');
+
 /**
  *  Gets all data for a user.
  * 
  *  @param {String} username 
  */
 function fetchUser(username){
+    clearInterface();
     fetch(`https://api.soundcloud.com/users/${username}?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd`)
     .then((response) => {
         return response.json();
@@ -52,9 +56,10 @@ function fetchTracks(user_id){
             return response.json();
         })
         .then((tracks)=>{
-            for (var x = 0; x < tracks.length && x < 3; x++){
-                g_user.tracks.push(tracks[x].id);
+            for (let i = 0; i < tracks.length && i < 3; i++){
+                g_user.tracks.push(tracks[i]);
             }
+            loadInterface();
         });
 }
 

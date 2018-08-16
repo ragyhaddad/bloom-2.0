@@ -33,6 +33,7 @@ function clearInterface(){
 	$('.user-followers')[0].innerHTML = '';
 	$('.user-tracks')[0].innerHTML = '';
 	$('.current-user')[0].innerHTML = '';
+	$('.data-display')[0].innerHTML = '';
 }
 
 /**

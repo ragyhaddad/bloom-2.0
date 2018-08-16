@@ -14,3 +14,12 @@ function parseCount(number){
 		return (Math.round((number/1000000) * 10) / 10) + "m Followers";
 	}
 }
+
+/**
+ *	Links to the soundcloud page for the user.
+ * 
+ *	@param {string} permalink - The user's permalink 
+ */
+function goToSoundcloud(){
+	window.open(`https://soundcloud.com/${g_user.permalink}`, '_blank');
+}

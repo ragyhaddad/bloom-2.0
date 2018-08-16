@@ -1,4 +1,4 @@
-.media-player{
+.player{
 	position: fixed;
 	bottom: 20px;
 	left: 324px;
@@ -7,6 +7,6 @@
 	transition: transform 0.5s, opacity 0.5s;
 	z-index: 10;
 }
-.media-player iframe{
+.player iframe{
 	margin-bottom: -3px;
 }

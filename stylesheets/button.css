@@ -1,0 +1,55 @@
+.primary-button{
+	height: 40px;
+	width: 40px;
+	padding: 12px;
+	background: var(--accent);
+	border-radius: 2px;
+	cursor: pointer;
+	transition: box-shadow 0.2s, transform 0.2s;
+}
+.secondary-button{
+	height: 40px;
+	width: 40px;
+	padding: 12px;
+	background: var(--light-3);
+	border-radius: 2px;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+.search-buttons{
+	position: fixed;
+	bottom: 352px;
+	left: 20px;
+	z-index: 5;
+}
+.search-buttons img{
+	margin-right: 7px;
+	float: left;
+}
+.search-buttons img:hover, .radio-button:hover, .player-button:hover{
+	transform: translate3d(0px, -3px, 0px);
+}
+
+.player-button{
+	position: fixed;
+	bottom: 20px;
+	left: 277px;
+	z-index: 5;
+}
+
+.mail-button{
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 5;
+}
+.settings-button{
+	position: fixed;
+	top: 20px;
+	right: 67px;
+	z-index: 5;
+}
+.settings-button:hover, .mail-button:hover{
+	transform: translate3d(0px, 3px, 0px);
+}

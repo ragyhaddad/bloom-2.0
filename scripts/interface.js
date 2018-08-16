@@ -25,6 +25,7 @@ function loadInterface(){
  *	Clears data stored in the interface.
  */
 function clearInterface(){
+	d3.select('svg').remove();
 	// Hide elements
 	hideInterface();
 	// Clear elements
@@ -33,7 +34,6 @@ function clearInterface(){
 	$('.user-followers')[0].innerHTML = '';
 	$('.user-tracks')[0].innerHTML = '';
 	$('.current-user')[0].innerHTML = '';
-	$('.data-display')[0].innerHTML = '';
 }
 
 /**
@@ -46,8 +46,6 @@ function hideInterface(){
 	$('.user-tracks').css('opacity', '0');
 	$('.current-user').css('display', 'none');	
 	$('.current-user').css('opacity', '0');
-	$('.data-display').css('display', 'none');	
-	$('.data-display').css('opacity', '0');
 }
 
 /**
@@ -57,11 +55,9 @@ function displayInterface(){
 	$('.user-info').css('display', 'block');
 	$('.user-tracks').css('display', 'block');
 	$('.current-user').css('display', 'block');
-	$('.data-display').css('display', 'block');
 	setTimeout(() => {
 		$('.user-info').css('opacity', '1');
 		$('.user-tracks').css('opacity', '1');
 		$('.current-user').css('opacity', '1');
-		$('.data-display').css('opacity', '1');
-	}, 150);
+	}, 100);
 }

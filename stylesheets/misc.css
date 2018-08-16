@@ -25,3 +25,35 @@
 	font-weight: bold;
 	color: var(--text);
 }
+
+.loading{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	right: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 5%;
+	z-index: 1;
+}
+.spinner{
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	border-top: 4px solid var(--accent);
+  border-left: 4px solid var(--light-3);
+  border-right: 4px solid var(--light-3);
+  border-bottom: 4px solid var(--light-3);
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -58,5 +58,5 @@ function displayInterface(){
 		$('.user-info').css('opacity', '1');
 		$('.user-tracks').css('opacity', '1');
 		$('.current-user').css('opacity', '1');
-	}, 200);
+	}, 150);
 }

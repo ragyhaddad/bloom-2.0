@@ -8,7 +8,7 @@ let playerOpen = false;
 function playTrack(id){
 	// Create playlist
 	g_playlist = g_user.tracks.concat(g_user.likes);
-	console.log(g_playlist);
+
 	// Play track
 	if(!playerOpen){
 		openPlayer();

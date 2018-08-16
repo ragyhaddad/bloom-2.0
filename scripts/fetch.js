@@ -13,7 +13,6 @@ function fetchUser(username){
         return response.json();
     })
     .then((user) =>{
-        console.log(user);
         g_user.id = user.id; 
         g_user.permalink = user.permalink;
         g_user.username = user.username;
@@ -44,7 +43,10 @@ function fetchFollowings(url){
             }
             if (followings.next_href != null){
                 fetchFollowings(followings.next_href);
-            }    
+            }
+            else{
+                drawGraph();
+            }   
         }); 
 }
 
@@ -66,7 +68,6 @@ function fetchTracks(user_id){
             loadInterface();
         });
 }
-
 /**
  *  Fetch current user likes.
  * 

@@ -3,21 +3,21 @@
  * 
  *  @param {String} username 
  */
-function fetchUser(username){
+async function fetchUser(username){
     fetch(`https://api.soundcloud.com/users/${username}?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd`)
     .then((response) => {
         return response.json();
     })
     .then((user) =>{
-        console.log(user);
         g_user.id = user.id; 
         g_user.permalink = user.permalink;
         g_user.username = user.username;
         g_user.follower_count = user.followers_count;
         g_user.image = user.avatar_url;
         fetchTracks(user.id);
-        fetchFollowings(`https://api.soundcloud.com/users/${user.id}/followings?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd&limit=200`);   
-    });       
+        fetchFollowings(`https://api.soundcloud.com/users/${user.id}/followings?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd&limit=200`)
+        
+    });   
 }
 
 /**
@@ -36,7 +36,10 @@ function fetchFollowings(url){
             }
             if (followings.next_href != null){
                 fetchFollowings(followings.next_href);
-            }    
+            }
+            else{
+                drawGraph();
+            }   
         }); 
 }
 
@@ -57,7 +60,6 @@ function fetchTracks(user_id){
             }
         });
 }
-
 /**
  *  Fetch current user likes.
  * 

@@ -2,7 +2,6 @@
  *  drawGraph function - draws graph from g_user global variable
  */
  function drawGraph(){
-    $('.data-display')[0].innerHTML = '';
     var graphLinks = [];
     // D3 Window size
     var width = window.innerWidth;

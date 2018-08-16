@@ -7,3 +7,21 @@
 	opacity: 0.15;
 	z-index: 5;
 }
+
+.current-user{
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	transition: opacity 0.5s;
+	font-size: 15px;
+	font-weight: lighter;
+	z-index: 5;
+}
+.current-user p{
+	color: rgba(59,61,63,0.75);
+}
+.strong{
+	font-weight: bold;
+	color: var(--text);
+}

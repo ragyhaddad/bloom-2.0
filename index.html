@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<title>Bloom - Discover new artists, explore new music.</title>
+	<link rel="shortcut icon" href="./images/favicon.png">
 
 	<link rel="stylesheet" href="./stylesheets/main.css">
 </head>
@@ -16,16 +17,41 @@
 
 	<!-- User sidebar -->
 	<div class="user">
-		<div class="user-info">
-			<img id="user-image" src="" draggable="false">
-			<h3 id="user-name"></h3>
-			<p id="user-followers"></p>
+		<div class="user-info" onclick="goToSoundcloud()">
+			<img class="user-image" src="" draggable="false">
+			<h3 class="user-name"></h3>
+			<p class="user-followers"></p>
 		</div>
-		<ul id="user-tracks" class="user-tracks"></ul>
+		<ul class="user-tracks"></ul>
 	</div>
 
-	<!-- Media player -->
-	<div class="player"></div>
+	<!-- Extra info for current user -->
+	<div class="current-user"></div>
+
+	<!-- Search buttons -->
+	<div class="search-buttons">
+		<img class="primary-button" src="./images/search.svg" draggable="false" title="Search for a user">
+		<img class="secondary-button" src="./images/favorite.svg" draggable="false" title="Our favorite artists">
+		<img onclick="getRandom()" class="secondary-button" src="./images/random.svg" draggable="false" title="Discover a random user">
+	</div>
+
+	<!-- Audio player -->
+	<div class="player">
+		<iframe width="500" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/279989691&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+	</div>
+	<!-- Button for player -->
+	<img class="player-button secondary-button" src="./images/music.svg" draggable="false" title="Open the player">
+
+	<!-- Settings button -->
+	<img class="settings-button secondary-button" src="./images/settings.svg" draggable="false">
+	<!-- Settings modal -->
+	<div class="settings"></div>
+
+	<!-- Mail button -->
+	<img class="mail-button secondary-button" src="./images/mail.svg" draggable="false">
+	<!-- Mail modal -->
+	<div class="mail"></div>
+	
 
 	<!-- Watermark logo -->
 	<img class="logo-watermark" src="./images/logo.svg" draggable="false">
@@ -35,6 +61,7 @@
 	<script src="./scripts/globals.js"></script>
 	<script src="./scripts/utility.js"></script>
 	<script src="./scripts/interface.js"></script>
+	<script src="./scripts/player.js"></script>
 	<script src="./scripts/fetch.js"></script>
 	<script src="./scripts/simulation.js"></script>
 </body>

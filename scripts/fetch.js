@@ -1,9 +1,13 @@
+// Testing 
+fetchUser('flume');
+
 /**
  *  Gets all data for a user.
  * 
  *  @param {String} username 
  */
-async function fetchUser(username){
+function fetchUser(username){
+    clearInterface();
     fetch(`https://api.soundcloud.com/users/${username}?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd`)
     .then((response) => {
         return response.json();
@@ -12,12 +16,15 @@ async function fetchUser(username){
         g_user.id = user.id; 
         g_user.permalink = user.permalink;
         g_user.username = user.username;
-        g_user.follower_count = user.followers_count;
         g_user.image = user.avatar_url;
+        g_user.follower_count = user.followers_count;
+        g_user.followings = [];
+	    g_user.tracks = [];
+	    g_user.likes = [];
         fetchTracks(user.id);
-        fetchFollowings(`https://api.soundcloud.com/users/${user.id}/followings?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd&limit=200`)
-        
-    });   
+        fetchFollowings(`https://api.soundcloud.com/users/${user.id}/followings?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd&limit=200`);  
+        fetchLikes(user.id);
+    });       
 }
 
 /**
@@ -55,9 +62,10 @@ function fetchTracks(user_id){
             return response.json();
         })
         .then((tracks)=>{
-            for (var x = 0; x < tracks.length && x < 3; x++){
-                g_user.tracks.push(tracks[x].id);
+            for (let i = 0; i < tracks.length && i < 3; i++){
+                g_user.tracks.push(tracks[i]);
             }
+            loadInterface();
         });
 }
 /**
@@ -74,8 +82,30 @@ function fetchLikes(user_id){
             return response.json();
         })
         .then((tracks)=>{
-            for(var x = 0; x < tracks.length; x++){
-                g_user.likes.push(tracks[x].id);
+            for(var x = 0; x < tracks.collection.length; x++){
+                if(tracks.collection[x].track){
+                    g_user.likes.push(tracks.collection[x].track);
+                }
             }
+        });
+}
+
+/**
+ *  Handles the random button and loads a random user.
+ */
+function getRandom(){
+    let random = (Math.floor(Math.random() * 9999) + 90000);
+    fetch(`https://api.soundcloud.com/users/${random}?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd`)
+        .then(
+            function(response) {
+                if (response.status !== 200) {
+                    getRandom();
+                }else{
+                    return response.json();
+                }
+              }
+        )
+        .then((user) => {
+            fetchUser(user.permalink);
         });
 }

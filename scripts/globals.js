@@ -21,3 +21,8 @@ var g_settings = {
 		max: null
 	}
 }
+
+/**
+ *	Stores tracks in the current playlist.
+ */
+var g_playlist = [];

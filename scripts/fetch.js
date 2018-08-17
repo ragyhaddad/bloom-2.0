@@ -47,7 +47,7 @@ function fetchFollowings(url){
             else{
                 setTimeout(() => {
                     drawGraph();
-                }, 300);
+                }, 400);
             }   
         }); 
 }

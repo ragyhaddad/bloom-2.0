@@ -2,6 +2,7 @@
 @import "./sidebar.css";
 @import "./player.css";
 @import "./button.css";
+@import "./modal.css";
 @import "./misc.css";
 
 :root{

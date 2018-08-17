@@ -106,10 +106,8 @@
 
             }
             
-        })
-        .attr('onclick',function(d){
-            return `fetchUser("${d.permalink}")`
-        })
+        )
+       
 
     
     //Add links 

@@ -33,7 +33,6 @@ function clearInterface(){
 	$('.user-followers')[0].innerHTML = '';
 	$('.user-tracks')[0].innerHTML = '';
 	$('.current-user')[0].innerHTML = '';
-	$('.data-display')[0].innerHTML = '';
 }
 
 /**
@@ -46,6 +45,7 @@ function hideInterface(){
 	$('.user-tracks').css('opacity', '0');
 	$('.current-user').css('display', 'none');	
 	$('.current-user').css('opacity', '0');
+	
 }
 
 /**

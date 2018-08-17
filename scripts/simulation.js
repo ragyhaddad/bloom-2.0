@@ -2,7 +2,8 @@
  *  drawGraph function - draws graph from g_user global variable
  */
  function drawGraph(){
-    $('.data-display')[0].innerHTML = '';
+	d3.select('svg').remove();    
+    // $('.data-display')[0].innerHTML = '';
     var graphLinks = [];
     // D3 Window size
     var width = window.innerWidth;
@@ -37,8 +38,8 @@
         'nodes' : g_user.followings,
         'links' : graphLinks
     }
-
-    // graph.nodes.push(g_user)
+    currentNode = {'id':g_user.id};
+    graph.nodes.push(currentNode);
 
     var simulation = d3.forceSimulation(graph.nodes)
     .force("charge", d3.forceManyBody())
@@ -55,6 +56,7 @@
     .append('circle')
     .attr('r',function(d){return radiusScale(d.followers_count)})
     .attr('fill',function(d){return color(d.followers_count)})
+    .attr('onclick',function(d){ return 'fetchUser("' +d.permalink+'")'})
 
     simulation
       .nodes(graph.nodes)

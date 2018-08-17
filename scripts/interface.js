@@ -46,6 +46,7 @@ function hideInterface(){
 	$('.user-tracks').css('opacity', '0');
 	$('.current-user').css('display', 'none');	
 	$('.current-user').css('opacity', '0');
+	
 }
 
 /**

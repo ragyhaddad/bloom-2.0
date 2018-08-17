@@ -2,6 +2,11 @@
  *  drawGraph function - draws graph from g_user global variable
  */
  function drawGraph(){
+<<<<<<< HEAD
+	d3.select('svg').remove();    
+    // $('.data-display')[0].innerHTML = '';
+=======
+>>>>>>> 8f0e8b534c78814c68ed9793727779ce62109c5a
     var graphLinks = [];
     // D3 Window size
     var width = window.innerWidth;
@@ -37,8 +42,8 @@
         'nodes' : g_user.followings,
         'links' : graphLinks
     }
-
-    // graph.nodes.push(g_user)
+    currentNode = {'id':g_user.id};
+    graph.nodes.push(currentNode);
 
     var simulation = d3.forceSimulation(graph.nodes)
         .force("charge", d3.forceManyBody())
@@ -48,6 +53,16 @@
         .force("charge", d3.forceManyBody())
     
     var nodes = svg.append('g')
+<<<<<<< HEAD
+    .attr('class','nodes')
+    .selectAll('circle')
+    .data(graph.nodes)
+    .enter()
+    .append('circle')
+    .attr('r',function(d){return radiusScale(d.followers_count)})
+    .attr('fill',function(d){return color(d.followers_count)})
+    .attr('onclick',function(d){ return 'fetchUser("' +d.permalink+'")'})
+=======
         .attr('class','nodes')
         .selectAll('circle')
         .data(graph.nodes)
@@ -56,6 +71,7 @@
             .attr('class','node')
             .attr('r',function(d){return radiusScale(d.followers_count)})
             .attr('fill',function(d){return color(d.followers_count)})
+>>>>>>> 8f0e8b534c78814c68ed9793727779ce62109c5a
 
     simulation
       .nodes(graph.nodes)

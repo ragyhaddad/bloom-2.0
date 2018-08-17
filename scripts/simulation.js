@@ -94,11 +94,13 @@
             }
             else{
                 return colorScale(d.followers_count);
-            }
-            
+            } 
+        })
+        .attr('stroke',function(){
+            return 'var(--light-2)';
         })
         .attr('onclick',function(d){
-            return `fetchUser("${d.permalink}")`
+            return `fetchUser("${d.permalink}")`;
         })
         .attr('cx',width *0.55)
         .attr('cy',height/2)

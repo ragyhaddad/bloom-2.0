@@ -6,7 +6,7 @@ function loadInterface(){
 	// Load elements
 	$('.user-image')[0].src = g_user.image;
 	$('.user-name')[0].innerHTML = g_user.username;
-	$('.user-followers')[0].innerHTML = parseCount(g_user.follower_count);
+	$('.user-followers')[0].innerHTML = parseCount(g_user.followers_count);
 	let tracks_html = `<div class="tracks-fade"></div>`;
 	g_user.tracks.forEach(track => {
 		tracks_html += 

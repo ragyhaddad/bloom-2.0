@@ -17,7 +17,7 @@ function fetchUser(username){
         g_user.permalink = user.permalink;
         g_user.username = user.username;
         g_user.image = user.avatar_url;
-        g_user.follower_count = user.followers_count;
+        g_user.followers_count = user.followers_count;
         g_user.followings = [];
 	    g_user.tracks = [];
 	    g_user.likes = [];

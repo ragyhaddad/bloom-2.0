@@ -22,7 +22,6 @@
 	margin-bottom: 15px;
 	margin-top: 30px;
 	cursor: pointer;
-	transition: transform 0.2s;
 }
 .user-name{
 	margin-bottom: 4px;
@@ -31,7 +30,6 @@
 	font-size: 20px;
 	overflow-wrap: break-word;
 	cursor: pointer;
-	transition: opacity 0.1s;
 }
 .user-followers{
 	margin-bottom: 20px;
@@ -41,7 +39,6 @@
 	opacity: 0.5;
 	font-weight: lighter;
 	cursor: pointer;
-	transition: opacity 0.1s;
 }
 
 .user-tracks{

@@ -25,6 +25,7 @@ function loadInterface(){
  *	Clears data stored in the interface.
  */
 function clearInterface(){
+	d3.select('svg').remove();
 	// Hide elements
 	hideInterface();
 	// Clear elements
@@ -59,5 +60,5 @@ function displayInterface(){
 		$('.user-info').css('opacity', '1');
 		$('.user-tracks').css('opacity', '1');
 		$('.current-user').css('opacity', '1');
-	}, 150);
+	}, 100);
 }

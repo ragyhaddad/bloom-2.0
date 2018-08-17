@@ -22,7 +22,7 @@ function fetchUser(username){
 	    g_user.tracks = [];
 	    g_user.likes = [];
         fetchTracks(user.id);
-        fetchFollowings(`https://api.soundcloud.com/users/${user.id}/followings?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd&limit=200`);  
+        fetchFollowings(`https://api.soundcloud.com/users/${user.id}/followings?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd&limit=200`);
         fetchLikes(user.id);
     });       
 }
@@ -45,7 +45,9 @@ function fetchFollowings(url){
                 fetchFollowings(followings.next_href);
             }
             else{
-                drawGraph();
+                setTimeout(() => {
+                    drawGraph();
+                }, 300);
             }   
         }); 
 }
@@ -94,7 +96,7 @@ function fetchLikes(user_id){
  *  Handles the random button and loads a random user.
  */
 function getRandom(){
-    let random = (Math.floor(Math.random() * 9999) + 90000);
+    let random = (Math.floor(Math.random() * 9999) + 1);
     fetch(`https://api.soundcloud.com/users/${random}?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd`)
         .then(
             function(response) {

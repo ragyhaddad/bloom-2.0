@@ -30,7 +30,7 @@
 
 body{
 	background: var(--light-2);
-	animation: fade 0.2s ease-in 0.5s backwards;
+	animation: fade 0.5s ease-in 0.5s backwards;
 	overflow: hidden;
 }
 

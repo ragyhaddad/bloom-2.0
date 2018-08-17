@@ -48,7 +48,6 @@
   border-bottom: 4px solid var(--light-3);
   animation: spin 0.75s linear infinite;
 }
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -56,4 +55,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title-screen{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: var(--light-2);
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 1s;
+}
+.title-screen svg:first-child{
+	width: 200px;
+	transition: opacity 0.5s;
+	position: absolute;
+	transform: translate3d(2px, 0px, 0px);
+}
+.title-screen svg:last-child{
+	width: 200px;
+	transition: opacity 0.5s;
+	transform: translate3d(-1px, 0px, 0px);
 }

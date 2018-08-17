@@ -25,7 +25,7 @@ function loadInterface(){
  *	Clears data stored in the interface.
  */
 function clearInterface(){
-	d3.select('svg').remove();
+	d3.select('.main-svg').remove();
 	// Hide elements
 	hideInterface();
 	// Clear elements
@@ -62,3 +62,24 @@ function displayInterface(){
 		$('.current-user').css('opacity', '1');
 	}, 100);
 }
+
+/**
+ *	Anime animations
+ */
+var lineDrawing = anime({
+  targets: '.title-screen .lines path',
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: 'easeInOutSine',
+  duration: 1500,
+  delay: function(el, i) { return i * 150 + 500 },
+  direction: 'forwards'
+});
+setTimeout(() => {
+	$('.title-screen svg').css('opacity', '0');
+}, 4000);
+setTimeout(() => {
+	$('.title-screen').css('opacity', '0');
+}, 4500);
+setTimeout(() => {
+	$('.title-screen').css('display', 'none');
+}, 5500);

@@ -25,6 +25,7 @@ function loadInterface(){
  *	Clears data stored in the interface.
  */
 function clearInterface(){
+	d3.select('svg').remove();
 	// Hide elements
 	hideInterface();
 	// Clear elements
@@ -33,7 +34,6 @@ function clearInterface(){
 	$('.user-followers')[0].innerHTML = '';
 	$('.user-tracks')[0].innerHTML = '';
 	$('.current-user')[0].innerHTML = '';
-	$('.data-display')[0].innerHTML = '';
 }
 
 /**
@@ -59,5 +59,5 @@ function displayInterface(){
 		$('.user-info').css('opacity', '1');
 		$('.user-tracks').css('opacity', '1');
 		$('.current-user').css('opacity', '1');
-	}, 150);
+	}, 100);
 }

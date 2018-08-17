@@ -20,12 +20,13 @@
         }
         graphLinks.push(link);
     }
+    
     var graph = {
         'nodes' : g_user.followings,
         'links' : graphLinks
     }
     currentNode = {'id':g_user.id, 'followers_count':g_user.followers_count, 'permalink':g_user.permalink};
-    graph.nodes.push(currentNode);
+    graph.nodes.unshift(currentNode);
 
     /**
      * Dimensions
@@ -127,22 +128,14 @@
     function ticked (){
         nodes
         .attr('cx',function(d){
-            if(d.id == g_user.id){
-                return width*0.55;
-            }
-            else{
-                return d.x; 
-            }     
+            return d.x; 
+        
         })
         .attr('cy',function(d){
-        if(d.id == g_user.id){
-                return height/2;
-            }
-            else{
-                return d.y; 
-            }     
+            return d.y;    
         })
     }
+
     /**
      * Attach Zoom to SVG after rendering
      */

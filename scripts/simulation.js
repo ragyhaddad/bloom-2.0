@@ -20,12 +20,14 @@
         }
         graphLinks.push(link);
     }
+    
     var graph = {
         'nodes' : g_user.followings,
         'links' : graphLinks
     }
     currentNode = {'id':g_user.id, 'followers_count':g_user.followers_count, 'permalink':g_user.permalink};
-    graph.nodes.push(currentNode);
+    graph.nodes.unshift(currentNode);
+
 
     /**
      * Dimensions
@@ -42,7 +44,8 @@
         radiusScale
         .exponent(0.2)
         .domain([0, 10000000])
-        .range([2, 15]);
+        .range([4, 17]);
+
     
     /**
      * Zoom Options
@@ -58,9 +61,6 @@
         nodes.attr("transform", d3.event.transform);
     }
     
-    
-
-
     /**
      * Drawing the graph
      */
@@ -71,6 +71,7 @@
         .attr('height','100%')
         .on('zoom',zoomed)
     
+
     //Add nodes
     var nodes = svg.append('g')
         .attr('class','nodes')
@@ -94,6 +95,7 @@
             }
             else{
                 return colorScale(d.followers_count);
+
             } 
         })
         .attr('stroke',function(){
@@ -101,9 +103,14 @@
         })
         .attr('onclick',function(d){
             return `fetchUser("${d.permalink}")`;
+
+            }
+            
         })
-        .attr('cx',width *0.55)
-        .attr('cy',height/2)
+        .attr('onclick',function(d){
+            return `fetchUser("${d.permalink}")`
+        })
+
     
     //Add links 
     var links = svg.append("g")
@@ -119,27 +126,23 @@
         }))
         .force("charge", d3.forceManyBody())
         .force("center",d3.forceCenter(width *0.55, height/2))
-        .force('charge', d3.forceManyBody().strength(-180))
+        .force('charge', d3.forceManyBody().strength(-85))
         .force('forceX', d3.forceX().strength(.1).x(width * .5))
         .force('forceY', d3.forceY().strength(.1).y(height * .5))
+
+
     
     //Apply simulation to data objects
     simulation
       .nodes(graph.nodes)
       .on("tick", ticked)
-      simulation.force("link")
-      .links(graph.links);
-    
+
     //Translate simulation to graph
     function ticked (){
-        links
-        .attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
         nodes
         .attr('cx',function(d){return d.x})
         .attr('cy',function(d){return d.y})
+
     }
 
     /**

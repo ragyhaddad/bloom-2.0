@@ -6,7 +6,7 @@ var g_user = {
 	permalink:null,
 	username: null,
 	image: null,
-	follower_count:null,
+	followers_count:null,
 	followings: [],
 	tracks: [],
 	likes: []

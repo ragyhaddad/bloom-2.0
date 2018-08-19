@@ -25,6 +25,8 @@
         'nodes' : g_user.followings,
         'links' : graphLinks
     }
+
+    //Unshift source node to the beginning of the array - Avoiding adding links to center node.
     currentNode = {'id':g_user.id, 'followers_count':g_user.followers_count, 'permalink':g_user.permalink};
     graph.nodes.unshift(currentNode);
 
@@ -108,7 +110,6 @@
             
         )
        
-
     
     //Add links 
     var links = svg.append("g")

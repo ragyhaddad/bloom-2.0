@@ -2,7 +2,6 @@
  *	Loads new data into the interface.
  */
 function loadInterface(){
-	clearInterface();
 	// Load elements
 	$('.user-image')[0].src = g_user.image;
 	$('.user-name')[0].innerHTML = g_user.username;

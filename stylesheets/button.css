@@ -22,6 +22,9 @@
 	bottom: 352px;
 	left: 20px;
 	z-index: 5;
+	transform: translate3d(0px, -20px, 0px);
+	opacity: 0;
+	transition: transform 1s, opacity 1s;
 }
 .search-buttons img{
 	margin-right: 7px;
@@ -31,30 +34,43 @@
 	transform: translate3d(0px, -3px, 0px);
 }
 
-.player-button{
+.player-buttons{
 	position: fixed;
 	bottom: 20px;
-	left: 277px;
+	left: 278px;
 	z-index: 5;
+	transform: translate3d(20px, 0px, 0px);
+	transition: transform 1s, opacity 1s;
+	opacity: 0;
+}
+.player-button{
+	display: block;
+	transition: transform 0.2s;
 }
 
-.mail-button{
+.extra-buttons{
 	position: fixed;
 	top: 20px;
 	right: 20px;
 	z-index: 5;
+	transform: translate3d(0px, 20px, 0px);
+	opacity: 0;
+	transition: transform 1s, opacity 1s;
+}
+.mail-button{
+	position: absolute;
+	top: 0px;
+	right: 0px;
 }
 .settings-button{
-	position: fixed;
-	top: 20px;
-	right: 114px;
-	z-index: 5;
+	position: absolute;
+	top: 0px;
+	right: 47px;
 }
 .weekly-button{
-	position: fixed;
-	top: 20px;
-	right: 67px;
-	z-index: 5;
+	position: absolute;
+	top: 0px;
+	right: 94px;
 }
 .settings-button:hover, .mail-button:hover, .weekly-button:hover{
 	transform: translate3d(0px, 3px, 0px);

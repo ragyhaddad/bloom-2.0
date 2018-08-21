@@ -8,6 +8,9 @@
 	border-radius: 2px;
 	z-index: 10;
 	overflow-y: scroll;
+	opacity: 0;
+	transform: translate3d(-40px, 0px, 0px);
+	transition: transform 1s, opacity 1s;
 }
 
 .user-info{

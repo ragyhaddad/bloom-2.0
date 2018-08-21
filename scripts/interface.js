@@ -63,7 +63,7 @@ function displayInterface(){
 }
 
 /**
- *	Anime animations
+ *	Anime animations for load-in
  */
 var lineDrawing = anime({
   targets: '.title-screen .lines path',
@@ -74,7 +74,27 @@ var lineDrawing = anime({
   direction: 'forwards'
 });
 setTimeout(() => {
+	$('.user').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.user').css('opacity', '1');
+}, 3000);
+setTimeout(() => {
+	$('.search-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.search-buttons').css('opacity', '1');
+}, 3250);
+setTimeout(() => {
+	$('.player-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.player-buttons').css('opacity', '1');
+}, 3500);
+setTimeout(() => {
+	$('.extra-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.extra-buttons').css('opacity', '1');
+	$('.current-user-c').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.current-user-c').css('opacity', '1');
+}, 3750);
+setTimeout(() => {
 	$('.title-screen svg').css('opacity', '0');
+	$('.logo-watermark').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.logo-watermark').css('opacity', '0.2');
 }, 4000);
 setTimeout(() => {
 	$('.title-screen').css('opacity', '0');
@@ -82,3 +102,20 @@ setTimeout(() => {
 setTimeout(() => {
 	$('.title-screen').css('display', 'none');
 }, 5500);
+
+// Debug for interface
+if(debug){
+	$('.title-screen').css('display', 'none');
+	$('.user').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.user').css('opacity', '1');
+	$('.search-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.search-buttons').css('opacity', '1');
+	$('.player-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.player-buttons').css('opacity', '1');
+	$('.extra-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.extra-buttons').css('opacity', '1');
+	$('.current-user-c').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.current-user-c').css('opacity', '1');
+	$('.logo-watermark').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.logo-watermark').css('opacity', '0.2');
+}

@@ -1,7 +1,7 @@
 .player{
 	position: fixed;
 	bottom: 20px;
-	left: 324px;
+	left: 325px;
 	transform: translate3d(0px, 240px, 0px);
 	opacity: 0;
 	transition: transform 0.5s, opacity 0.5s;

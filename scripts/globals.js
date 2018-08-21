@@ -1,4 +1,9 @@
 /**
+ *	Change to debug mode.
+ */
+var debug = false;
+
+/**
  *	Stores data about the current user.
  */ 
 var g_user = {

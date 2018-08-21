@@ -6,17 +6,25 @@
 	padding: 40px;
 	opacity: 0.2;
 	z-index: 5;
+	transform: translate3d(0px, 20px, 0px);
+	opacity: 0;
+	transition: transform 1s, opacity 1s;
 }
 
 .current-user{
-	position: fixed;
-	top: 0;
-	left: 0;
-	padding: 20px;
 	transition: opacity 0.5s;
 	font-size: 15px;
 	font-weight: lighter;
+}
+.current-user-c{
+	position: fixed;
 	z-index: 5;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	transform: translate3d(0px, 20px, 0px);
+	opacity: 0;
+	transition: transform 1s, opacity 1s;
 }
 .current-user p{
 	color: rgba(59,61,63,0.75);
@@ -64,7 +72,7 @@
 	right: 0;
 	bottom: 0;
 	background: var(--light-2);
-	z-index: 1000;
+	z-index: 3;
 	display: flex;
 	align-items: center;
 	justify-content: center;

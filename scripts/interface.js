@@ -82,16 +82,12 @@ setTimeout(() => {
 	$('.search-buttons').css('opacity', '1');
 }, 3250);
 setTimeout(() => {
-	$('.player-button').css('transform', 'translate3d(0px, 0px, 0px)');
-	$('.player-button').css('opacity', '1');
+	$('.player-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.player-buttons').css('opacity', '1');
 }, 3500);
 setTimeout(() => {
-	$('.mail-button').css('transform', 'translate3d(0px, 0px, 0px)');
-	$('.mail-button').css('opacity', '1');
-	$('.settings-button').css('transform', 'translate3d(0px, 0px, 0px)');
-	$('.settings-button').css('opacity', '1');
-	$('.weekly-button').css('transform', 'translate3d(0px, 0px, 0px)');
-	$('.weekly-button').css('opacity', '1');
+	$('.extra-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.extra-buttons').css('opacity', '1');
 	$('.current-user-c').css('transform', 'translate3d(0px, 0px, 0px)');
 	$('.current-user-c').css('opacity', '1');
 }, 3750);
@@ -114,14 +110,10 @@ if(debug){
 	$('.user').css('opacity', '1');
 	$('.search-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
 	$('.search-buttons').css('opacity', '1');
-	$('.player-button').css('transform', 'translate3d(0px, 0px, 0px)');
-	$('.player-button').css('opacity', '1');
-	$('.mail-button').css('transform', 'translate3d(0px, 0px, 0px)');
-	$('.mail-button').css('opacity', '1');
-	$('.settings-button').css('transform', 'translate3d(0px, 0px, 0px)');
-	$('.settings-button').css('opacity', '1');
-	$('.weekly-button').css('transform', 'translate3d(0px, 0px, 0px)');
-	$('.weekly-button').css('opacity', '1');
+	$('.player-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.player-buttons').css('opacity', '1');
+	$('.extra-buttons').css('transform', 'translate3d(0px, 0px, 0px)');
+	$('.extra-buttons').css('opacity', '1');
 	$('.current-user-c').css('transform', 'translate3d(0px, 0px, 0px)');
 	$('.current-user-c').css('opacity', '1');
 	$('.logo-watermark').css('transform', 'translate3d(0px, 0px, 0px)');

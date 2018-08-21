@@ -22,7 +22,6 @@ function fetchUser(username){
 	    g_user.tracks = [];
 	    g_user.likes = [];
         fetchTracks(user.id);
-        fetchFollowings(`https://api.soundcloud.com/users/${user.id}/followings?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd&limit=200`);
         fetchLikes(user.id);
     });       
 }
@@ -45,9 +44,7 @@ function fetchFollowings(url){
                 fetchFollowings(followings.next_href);
             }
             else{
-                setTimeout(() => {
-                    drawGraph();
-                }, 400);
+                drawGraph();
             }   
         }); 
 }
@@ -68,6 +65,7 @@ function fetchTracks(user_id){
                 g_user.tracks.push(tracks[i]);
             }
             loadInterface();
+            fetchFollowings(`https://api.soundcloud.com/users/${user_id}/followings?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd&limit=200`);
         });
 }
 /**

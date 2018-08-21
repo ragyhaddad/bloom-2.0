@@ -28,6 +28,9 @@ var g_settings = {
 }
 
 /**
- *	Stores tracks in the current playlist.
+ * 	Stores some site data for the session.
  */
-var g_playlist = [];
+var g_cache = {
+	user_history: [],
+	playlist: []
+}

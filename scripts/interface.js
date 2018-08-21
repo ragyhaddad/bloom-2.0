@@ -45,7 +45,8 @@ function hideInterface(){
 	$('.user-tracks').css('opacity', '0');
 	$('.current-user').css('display', 'none');	
 	$('.current-user').css('opacity', '0');
-	
+	$('.data-display').css('visibility', 'hidden');
+	$('.data-display').css('opacity', '0');
 }
 
 /**
@@ -55,10 +56,12 @@ function displayInterface(){
 	$('.user-info').css('display', 'block');
 	$('.user-tracks').css('display', 'block');
 	$('.current-user').css('display', 'block');
+	$('.data-display').css('visibility', 'visible');
 	setTimeout(() => {
 		$('.user-info').css('opacity', '1');
 		$('.user-tracks').css('opacity', '1');
 		$('.current-user').css('opacity', '1');
+		$('.data-display').css('opacity', '1');
 	}, 100);
 }
 

@@ -1,7 +1,7 @@
 /**
  *	Opens the modal for searching
  */
-function openSearchModal(){
+function openSearch(){
 	$('.search-modal').css('display', 'flex');
 	setTimeout(() => {
 		$('.search-modal-bg').css('opacity', '1');
@@ -15,7 +15,7 @@ function openSearchModal(){
 /**
  *	Closes the modal for searching
  */
-function closeSearchModal(){
+function closeSearch(){
 	$('.search-modal-c input').val('');
 	$('.search-modal').css('display', 'none');
 	$('.search-modal-bg').css('opacity', '0');

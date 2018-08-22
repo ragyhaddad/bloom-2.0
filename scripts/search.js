@@ -24,7 +24,7 @@ function closeSearch(){
 }
 
 /**
- * Search a SoundCloud Username.
+ * Search a SoundCloud Username.   Note: Search results are stored in SearchResults.collection
  * @param {String} - Search Term (Username)
  */
 function searchInput(searchTerm){
@@ -36,7 +36,7 @@ function searchInput(searchTerm){
 		return response.json();
 	  })
 	  .then((searchResults) => {
-		console.log(searchResults);
+		console.log(searchResults.collection);
 	  })
 	  .catch((error) => {
 		console.log(error);

@@ -6,7 +6,7 @@
 	padding: 40px;
 	opacity: 0.2;
 	z-index: 5;
-	transform: translate3d(0px, 20px, 0px);
+	transform: translate3d(0px, -20px, 0px);
 	opacity: 0;
 	transition: transform 1s, opacity 1s;
 }

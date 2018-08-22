@@ -60,7 +60,7 @@
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	transition: transform 0.2s;
+	transition: transform 0.25s;
 }
 .user-tracks li:hover{
 	transform: translate3d(3px, 0px, 0px);

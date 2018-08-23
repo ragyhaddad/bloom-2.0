@@ -34,7 +34,7 @@
     /**
      * Dimensions
      */
-    var width = window.innerWidth;
+    var width = window.innerWidth-300;
     var height = window.innerHeight;
     /**
      * Scales

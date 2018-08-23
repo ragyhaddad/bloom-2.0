@@ -68,5 +68,5 @@
 	right: 0px;
 }
 .settings-button:hover, .mail-button:hover, .weekly-button:hover{
-	transform: translate3d(0px, 3px, 0px);
+	transform: translate3d(-3px, 0px, 0px);
 }

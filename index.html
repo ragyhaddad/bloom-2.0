@@ -137,10 +137,14 @@
 	</div>
 	<div class="search-modal">
 		<div class="search-modal-c">
-			<input type="text" placeholder="Search...">
-			<img class="secondary-button" src="./images/search-dark.svg" draggable="false">
+			<input id="search-input" type="text" placeholder="Search...">
+			<img onclick="startSearch()" class="secondary-button search-button-2" src="./images/search-dark.svg" draggable="false">
+			<div class="search-fade"></div>
 			<ul class="search-results">
 			</ul>
+			<div class="search-loading">
+				<div class="search-spinner"></div>
+			</div>
 		</div>
 		<div onclick="closeSearch()" class="search-modal-bg"></div>
 	</div>

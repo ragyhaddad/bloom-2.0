@@ -59,8 +59,8 @@
 }
 .mail-button{
 	position: absolute;
-	top: 0px;
-	right: 47px;
+	top: 47px;
+	right: 0px;
 }
 .settings-button{
 	position: absolute;

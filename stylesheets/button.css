@@ -22,7 +22,7 @@
 	bottom: 352px;
 	left: 20px;
 	z-index: 5;
-	transform: translate3d(0px, -20px, 0px);
+	transform: translate3d(20px, 0px, 0px);
 	opacity: 0;
 	transition: transform 1s, opacity 1s;
 }
@@ -51,7 +51,7 @@
 .extra-buttons{
 	position: fixed;
 	top: 20px;
-	right: 20px;
+	right: 322px;
 	z-index: 5;
 	transform: translate3d(-20px, 0px, 0px);
 	opacity: 0;
@@ -65,11 +65,6 @@
 .settings-button{
 	position: absolute;
 	top: 0px;
-	right: 0px;
-}
-.weekly-button{
-	position: absolute;
-	top: 94px;
 	right: 0px;
 }
 .settings-button:hover, .mail-button:hover, .weekly-button:hover{

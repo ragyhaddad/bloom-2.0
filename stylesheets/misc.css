@@ -1,9 +1,9 @@
 .logo-watermark{
 	position: fixed;
 	bottom: 0px;
-	right: 310px;
-	width: 150px;
-	padding: 40px;
+	right: 302px;
+	width: 110px;
+	padding: 20px;
 	z-index: 5;
 	transform: translate3d(-20px, 0px, 0px);
 	opacity: 0;

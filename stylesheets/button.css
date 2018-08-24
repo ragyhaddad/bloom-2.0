@@ -59,7 +59,7 @@
 }
 .mail-button{
 	position: absolute;
-	top: 47px;
+	top: 94px;
 	right: 0px;
 }
 .settings-button{
@@ -67,6 +67,11 @@
 	top: 0px;
 	right: 0px;
 }
-.settings-button:hover, .mail-button:hover, .weekly-button:hover{
+.info-button{
+	position: absolute;
+	top: 47px;
+	right: 0px;
+}
+.settings-button:hover, .mail-button:hover, .info-button:hover{
 	transform: translate3d(-3px, 0px, 0px);
 }

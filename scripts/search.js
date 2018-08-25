@@ -49,7 +49,7 @@ function searchInput(searchTerm){
 }
 
 /**
- *	Start the searching on click or enter key
+ *	Start the searching.
  */
 function startSearch(){
 	if($('#search-input').val()){
@@ -57,6 +57,10 @@ function startSearch(){
 		searchInput($('#search-input').val());
 	}
 }
+
+/**
+ *	Handle enter key to start searching.
+ */
 $('#search-input').on('keypress', function(event){
 	if (event.which == 13 || event.keyCode == 13) {
 		startSearch();
@@ -64,7 +68,7 @@ $('#search-input').on('keypress', function(event){
 });
 
 /**
- *	Load the search results
+ *	Load the search results.
  */
 function loadSearch(search_term, results){
 	html = '';
@@ -90,14 +94,14 @@ function loadSearch(search_term, results){
 }
 
 /**
- *	Clear the search results
+ *	Clear the search results.
  */
 function clearSearch(){
 	$('.search-results')[0].innerHTML = '';
 }
 
 /**
- *	Load a clicked user to DOM
+ *	Load a clicked user.
  */
 function searchEntryClicked(permalink){
 	closeSearch();

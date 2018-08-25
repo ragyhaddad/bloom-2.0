@@ -1,5 +1,6 @@
 /**
- *	Change to debug mode.
+ *	Change to debug.
+ * 	- No load in animation
  */
 var debug = false;
 

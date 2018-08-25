@@ -89,7 +89,6 @@ setTimeout(() => {
 	$('.player-buttons').css('opacity', '1');
 	$('.weekly').css('transform', 'translate3d(0px, 0px, 0px)');
 	$('.weekly').css('opacity', '1');
-	
 }, 3500);
 setTimeout(() => {
 	$('.current-user-c').css('transform', 'translate3d(0px, 0px, 0px)');
@@ -111,7 +110,9 @@ setTimeout(() => {
 	$('.title-screen').css('display', 'none');
 }, 5500);
 
-// Debug for interface
+/*
+ *	Debug for interface.
+ */
 if(debug){
 	$('.title-screen').css('display', 'none');
 	$('.user').css('transform', 'translate3d(0px, 0px, 0px)');

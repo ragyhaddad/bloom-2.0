@@ -119,3 +119,8 @@
 		display: flex;
 	}
 }
+@media (max-height: 450px){
+	.block-mobile{
+		display: flex;
+	}
+}

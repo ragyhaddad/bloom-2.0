@@ -1,5 +1,7 @@
-// Testing 
-fetchUser('flume');
+/**
+ *  When the page loads, populate a user
+ */ 
+getFavorites();
 
 /**
  *  Gets all data for a user.
@@ -108,4 +110,36 @@ function getRandom(){
         .then((user) => {
             fetchUser(user.permalink);
         });
+}
+
+/**
+ *  Handles the favorites button.
+ */
+function getFavorites(){
+    let favorites = [
+        "ragyhaddad",
+        "im-seb",
+        "fkj-2",
+        "samgellaitry",
+        "soulection",
+        "stillwoozy",
+        "kaytranada",
+        "polo-pan",
+        "flamingosis",
+        "masegomusic",
+        "harvey-sutherland",
+        "phazzmusic",
+        "bobby-analog",
+        "kerokerobonito",
+        "giraffage",
+        "starro",
+        "ofwgkta-official",
+        "tommisch",
+        "noname",
+        "mujobeatz",
+        "astronautico",
+        "phonogramme"
+    ];
+    let randomUser = favorites[Math.floor(Math.random() * favorites.length)];
+    fetchUser(randomUser);
 }

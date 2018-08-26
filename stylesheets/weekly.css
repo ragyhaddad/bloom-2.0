@@ -4,6 +4,7 @@
 	height: 100vh;
 	top: 0px;
 	right: 0px;
+	padding: 10px;
 	background: var(--light-3);
 	z-index: 5;
 	opacity: 0;
@@ -11,29 +12,49 @@
 	transition: transform 1s, opacity 1s;
 }
 
-/*
-	Featured Artist div Title
-*/
-.featured-title{
-	padding: 10px;
-	border-bottom: 1px solid grey;
-	margin-left:15px;
-	margin-right:15px;
-}
-
-.featured-title p {
-	color: var(--text);
+.section-title{
+	font-size: 14px;
+	text-transform: uppercase;
 	text-align: center;
+	font-weight: lighter;
+	opacity: 0.5;
+	margin-bottom: 10px;
 }
 
-/*
-	Div containing all artists
-*/
-.featured{
-	height: 300px;
-	overflow: auto;
+.weekly-section{
+	background: rgba(0,0,20,0.05);
+	border-radius: 2px;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+.featured-list{
+	list-style-type: none;
+	overflow: hidden;
+}
+.featured-list li{
+	width: 500%;
+	overflow: hidden;
+}
+.featured-list li{
+	margin-top: 10px;
+}
+.featured-list img{
+	float: left;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+.featured-info{
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.featured-info p{
+	font-size: 12px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	opacity: 0.75;
 }
 
-/*
-	Div for each featured artist
-*/
+

@@ -36,31 +36,15 @@ var g_cache = {
 	playlist: []
 }
 
-
-/**
- * Storing favorites in Globals.js so we can load 5 artists into weekly
- */
-let favorites = [
-	"ragyhaddad",
-	"im-seb",
-	"fkj-2",
-	"samgellaitry",
-	"soulection",
-	"stillwoozy",
-	"kaytranada",
-	"polo-pan",
-	"flamingosis",
-	"masegomusic",
-	"harvey-sutherland",
-	"phazzmusic",
-	"bobby-analog",
-	"kerokerobonito",
-	"giraffage",
-	"starro",
-	"ofwgkta-official",
-	"tommisch",
-	"noname",
-	"mujobeatz",
-	"astronautico",
-	"phonogramme"
-];
+var g_weekly = {
+	featured_artists: [
+		'ragyhaddad',
+		'im-seb',
+    'itsasymmetric'
+	],
+	featured_labels: [
+		'astronautico',
+		'nightowlcollective',
+    'soulection'
+	]
+}

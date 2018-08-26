@@ -8,6 +8,7 @@
 	background: var(--light-3);
 	z-index: 5;
 	opacity: 0;
+	overflow-y: scroll;
 	transform: translate3d(40px, 0px, 0px);
 	transition: transform 1s, opacity 1s;
 }
@@ -27,6 +28,10 @@
 	padding: 20px;
 	margin-bottom: 10px;
 }
+.weekly-section:last-child{
+	margin-bottom: 0px;
+}
+
 .featured-list{
 	list-style-type: none;
 	overflow: hidden;
@@ -34,27 +39,35 @@
 .featured-list li{
 	width: 500%;
 	overflow: hidden;
-}
-.featured-list li{
 	margin-top: 10px;
+	cursor: pointer;
+	transition: transform 0.25s;
+}.featured-list li:hover{
+	transform: translate3d(5px, 0px, 0px);
 }
 .featured-list img{
 	float: left;
 	height: 50px;
 	border-radius: 50%;
 	margin-right: 10px;
+	cursor: pointer;
 }
 .featured-info{
 	height: 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	cursor: pointer;
+}
+.featured-info h3{
+	cursor: pointer;
 }
 .featured-info p{
 	font-size: 12px;
 	font-weight: lighter;
 	text-transform: uppercase;
 	opacity: 0.75;
+	cursor: pointer;
 }
 
 

@@ -2,13 +2,13 @@
  *	Opens the modal for searching
  */
 function openSearch(){
-	$('.search-modal').css('display', 'flex');
+	$('.search').css('display', 'flex');
 	setTimeout(() => {
-		$('.search-modal-bg').css('opacity', '1');
+		$('.search-bg').css('opacity', '1');
 	}, 100);
 	setTimeout(() => {
-		$('.search-modal-c').css('opacity', '1');
-		$('.search-modal-c').css('transform', 'translate3d(0px, 0px, 0px)');
+		$('.search-c').css('opacity', '1');
+		$('.search-c').css('transform', 'translate3d(0px, 0px, 0px)');
 	}, 250);
 	$('#search-input').focus();
 }
@@ -18,11 +18,11 @@ function openSearch(){
  */
 function closeSearch(){
 	clearSearch();
-	$('.search-modal-c input').val('');
-	$('.search-modal').css('display', 'none');
-	$('.search-modal-bg').css('opacity', '0');
-	$('.search-modal-c').css('opacity', '0');
-	$('.search-modal-c').css('transform', 'translate3d(0px, -15px, 0px)');
+	$('.search-c input').val('');
+	$('.search').css('display', 'none');
+	$('.search-bg').css('opacity', '0');
+	$('.search-c').css('opacity', '0');
+	$('.search-c').css('transform', 'translate3d(0px, -15px, 0px)');
 }
 
 /**

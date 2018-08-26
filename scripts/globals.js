@@ -23,8 +23,8 @@ var g_user = {
  */ 
 var g_settings = {
 	follower_slider: {
-		min: null,
-		max: null
+		min: 0,
+		max: 10000000
 	}
 }
 

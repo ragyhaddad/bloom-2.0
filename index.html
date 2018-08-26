@@ -35,8 +35,8 @@
 	</div>
 
 	<!-- Search modal -->
-	<div class="search-modal">
-		<div class="search-modal-c">
+	<div class="search">
+		<div class="search-c">
 			<input id="search-input" type="text" placeholder="Search...">
 			<img onclick="startSearch()" class="secondary-button search-button-2" src="./images/search-dark.svg" draggable="false">
 			<div class="search-fade"></div>
@@ -46,7 +46,7 @@
 				<div class="search-spinner"></div>
 			</div>
 		</div>
-		<div onclick="closeSearch()" class="search-modal-bg"></div>
+		<div onclick="closeSearch()" class="search-bg"></div>
 	</div>
 
 	<!-- Audio player -->
@@ -67,18 +67,24 @@
 	<!-- Other important buttons -->
 	<div class="extra-buttons">
 		<!-- Settings button -->
-		<img class="settings-button secondary-button" src="./images/settings.svg" draggable="false" title="Settings">
-		<!-- Settings modal -->
-		<div class="settings"></div>
-
+		<img onclick="openSettings()" class="settings-button secondary-button" src="./images/settings.svg" draggable="false" title="Settings">
 		<!-- Mail button -->
 		<img class="mail-button secondary-button" src="./images/mail.svg" draggable="false" title="Contact">
-		<!-- Mail modal -->
-		<div class="mail"></div>
-
 		<!-- Info button -->
 		<img class="info-button secondary-button" src="./images/info.svg" draggable="false" title="Info">
 	</div>
+
+	<!-- Settings modal -->
+	<div class="settings">
+		<div class="settings-c">
+			<p><strong>Follower range</strong><span class="settings-count"></span></p>
+      <div id="range"></div>
+		</div>
+		<div onclick="closeSettings()" class="settings-bg"></div>
+	</div>
+
+	<!-- Mail modal -->
+	<div class="mail"></div>
 
 	<!-- Title screen svg -->
 	<div class="title-screen">
@@ -189,10 +195,12 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
-	<script src="./scripts/anime.min.js"></script>
+	<script src="./scripts/other/anime.min.js"></script>
+	<script src="./scripts/other/nouislider.min.js"></script>
 	<script src="./scripts/globals.js"></script>
 	<script src="./scripts/utility.js"></script>
 	<script src="./scripts/search.js"></script>
+	<script src="./scripts/settings.js"></script>
 	<script src="./scripts/interface.js"></script>
 	<script src="./scripts/player.js"></script>
 	<script src="./scripts/simulation.js"></script>

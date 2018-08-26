@@ -1,4 +1,4 @@
-.search-modal{
+.search{
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -10,7 +10,7 @@
 	justify-content: center;
 	padding: 10px;
 }
-.search-modal-c{
+.search-c{
 	position: relative;
 	width: 100%;
 	max-width: 600px;
@@ -24,7 +24,7 @@
 	opacity: 0;
 	transition: opacity 0.5s, transform 0.5s;
 }
-.search-modal-c input{
+.search-c input{
 	position: fixed;
 	width: 100%;
 	top: 0px;
@@ -37,7 +37,7 @@
 	cursor: text;
 	z-index: 104;
 }
-.search-modal-c input::placeholder{
+.search-c input::placeholder{
 	opacity: 0.75;
 	color: var(--text);
 }
@@ -50,13 +50,13 @@
 .search-button-2:hover{
 	transform: translate3d(-3px, 0px, 0px);
 }
-.search-modal-bg{
+.search-bg{
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(0,0,0,0.25);
+	background: rgba(0,0,0,0.4);
 	cursor: pointer;
 	opacity: 0;
 	transition: opacity 0.3s;

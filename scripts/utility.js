@@ -1,5 +1,5 @@
 /**
- * 	Parses a number count to be displayed.
+ * 	Parses a number count to be displayed with followers.
  * 
  *	@param {int} number 
  */
@@ -12,6 +12,21 @@ function parseCount(number){
 		return (Math.round((number/1000) * 10) / 10) + "k Followers";
 	}else{
 		return (Math.round((number/1000000) * 10) / 10) + "m Followers";
+	}
+}
+
+/**
+ * 	Parses a number count to be displayed with just numbers.
+ * 
+ *	@param {int} number 
+ */
+function parseCountNum(number){
+	if(number < 999){
+		return Math.round(number);
+	}else if(number < 999999){
+		return (Math.round((number/1000) * 10) / 10) + "k";
+	}else{
+		return (Math.round((number/1000000) * 10) / 10) + "m";
 	}
 }
 

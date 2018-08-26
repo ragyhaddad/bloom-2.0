@@ -3,8 +3,10 @@
 @import "./player.css";
 @import "./button.css";
 @import "./search.css";
+@import "./settings.css";
 @import "./weekly.css";
 @import "./misc.css";
+@import "./other/nouislider.min.css";
 
 :root{
 	--accent: #4286f4;

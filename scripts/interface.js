@@ -62,6 +62,13 @@ function displayInterface(){
 		$('.user-tracks').css('opacity', '1');
 		$('.current-user').css('opacity', '1');
 		$('.data-display').css('opacity', '1');
+		if(g_cache.user_history.length > 1){
+			$('.back-button').css('transform', 'translate3d(0px, 0px, 0px)');
+			$('.back-button').css('opacity', '1');
+		}else{
+			$('.back-button').css('transform', 'translate3d(-50px, 0px, 0px)');
+			$('.back-button').css('opacity', '0');
+		}
 	}, 100);
 }
 

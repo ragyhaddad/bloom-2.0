@@ -34,6 +34,19 @@
 	transform: translate3d(0px, -3px, 0px);
 }
 
+.back-button{
+	position: fixed;
+	bottom: 302px;
+	left: 278px;
+	z-index: 5;
+	opacity: 0;
+	transform: translate3d(-50px, 0px, 0px);
+	transition: transform 0.25s, opacity 0.25s;
+}
+.back-button img:hover{
+	transform: translate3d(3px, 0px, 0px);
+}
+
 .player-buttons{
 	position: fixed;
 	bottom: 20px;

@@ -49,9 +49,19 @@ function fetchFollowings(url){
                 fetchFollowings(followings.next_href);
             }
             else{
-                g_graph.nodes.push(g_user);
+                g_graph.nodes.push({
+                    id: g_user.id,
+                    permalink: g_user.permalink,
+                    username: g_user.username,
+                    followers_count: g_user.followers_count
+                });
                 g_user.followings.forEach(user => {
-                    g_graph.nodes.push(user);
+                    g_graph.nodes.push({
+                        id: user.id,
+                        permalink: user.permalink,
+                        username: user.username,
+                        followers_count: user.followers_count
+                    });
                 });
                 drawGraph();
             }   

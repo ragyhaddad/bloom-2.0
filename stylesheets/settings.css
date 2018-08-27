@@ -13,7 +13,7 @@
 .settings-c{
 	position: relative;
 	width: 100%;
-	max-width: 600px;
+	max-width: 400px;
 	padding: 30px;
 	background: var(--light-2);
 	border-radius: 2px;

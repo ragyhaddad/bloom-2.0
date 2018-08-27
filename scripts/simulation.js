@@ -5,16 +5,16 @@
  function drawGraph(){
     // D3 Variables
     var graphLinks = [];
-    
+
     // Parsing links
-    // for (var x = 0; x < g_user.followings.length; x++){
-    //     var link = {
-    //         'source': g_user.permalink,
-    //         'target':g_user.followings[x].permalink,
-    //         'value': Math.round(Math.random()*9)
-    //     }
-    //     graphLinks.push(link);
-    // }
+    for (var x = 0; x < g_user.followings.length; x++){
+        var link = {
+            'source': g_user.permalink,
+            'target':g_user.followings[x].permalink,
+            'value': Math.round(Math.random()*9)
+        }
+        graphLinks.push(link);
+    }
 
     var graph = {
         'nodes' : g_graph.nodes,
@@ -29,7 +29,6 @@
     var maxFollowers = 0;
     var minFollowers = g_user.followings[0].followers_count; 
     g_user.followings.forEach(element => {
-        console.log(element);
         if(element.followers_count > maxFollowers){
             maxFollowers = element.followers_count;
         }

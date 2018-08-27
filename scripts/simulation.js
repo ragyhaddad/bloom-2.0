@@ -27,7 +27,7 @@
 
     // Finding range of followers
     var maxFollowers = 0;
-    var minFollowers = g_user.followings[0].followers_count; 
+    var minFollowers = 10000000000; 
     g_user.followings.forEach(element => {
         if(element.followers_count > maxFollowers){
             maxFollowers = element.followers_count;

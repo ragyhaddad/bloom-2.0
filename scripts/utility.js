@@ -38,3 +38,11 @@ function parseCountNum(number){
 function goToSoundcloud(){
 	window.open(`https://soundcloud.com/${g_user.permalink}`, '_blank');
 }
+
+/**
+ *	Takes the user back to the previous profile.
+ */
+function goBack(){
+	g_cache.user_history.pop();
+	fetchUser(g_cache.user_history.pop());
+}

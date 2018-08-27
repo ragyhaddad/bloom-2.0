@@ -15,8 +15,7 @@ var g_user = {
 	followers_count:null,
 	followings: [],
 	tracks: [],
-	likes: [],
-	graph_nodes: []
+	likes: []
 };
 
 /**
@@ -45,6 +44,9 @@ var g_cache = {
 	playlist: []
 }
 
+/**
+ * 	Stores data used in the weekly sidebar.
+ */
 var g_weekly = {
 	featured_artists: [
 		'ragyhaddad',
@@ -55,5 +57,6 @@ var g_weekly = {
 		'astronautico',
 		'nightowlcollective',
     'soulection'
-	]
+	],
+	track_of_week: '279989691'
 }

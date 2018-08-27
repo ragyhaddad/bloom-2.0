@@ -29,12 +29,10 @@ function closeSettings(){
 function adjustSettings() {
   var range = slider.noUiSlider.get();
   if (g_settings.follower_slider.min != range[0] || g_settings.follower_slider.max != range[1]) {
+		d3.select('.main-svg').remove();
     g_settings.follower_slider.min = range[0];
     g_settings.follower_slider.max = range[1];
-		d3.select('.main-svg').remove();
-		setTimeout(() => {
-			drawGraph();
-		}, 3000)
+		drawGraph();
   }
 }
 

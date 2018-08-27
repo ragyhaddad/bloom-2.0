@@ -54,5 +54,6 @@ var g_weekly = {
 		'astronautico',
 		'nightowlcollective',
     'soulection'
-	]
+	],
+	track_of_week: '279989691'
 }

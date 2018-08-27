@@ -44,6 +44,9 @@ var g_cache = {
 	playlist: []
 }
 
+/**
+ * 	Stores data used in the weekly sidebar.
+ */
 var g_weekly = {
 	featured_artists: [
 		'ragyhaddad',

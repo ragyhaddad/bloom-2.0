@@ -1,8 +1,7 @@
 /**
- * Load 5 featured artists
+ *  Load 3 featured artists.
  */
 function loadFeaturedArtists(){
-    html = '';
     g_weekly.featured_artists.forEach(artist => {
         fetch(`https://api.soundcloud.com/users/${artist}?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd`)
         .then((response) => {
@@ -22,10 +21,9 @@ function loadFeaturedArtists(){
 loadFeaturedArtists();
 
 /**
- * Load 5 featured artists
+ *  Load 3 featured labels.
  */
 function loadFeaturedLabels(){
-    html = '';
     g_weekly.featured_labels.forEach(label => {
         fetch(`https://api.soundcloud.com/users/${label}?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd`)
         .then((response) => {

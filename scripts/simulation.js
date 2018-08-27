@@ -22,10 +22,13 @@
         'links' : graphLinks
     }
 
+    /**
+     *  This function was causing drawGraph to break during settings.
+     */
     // Unshift source node to the beginning of the array.
     // Avoiding adding links to center node.
-    currentNode = {'id':g_user.id, 'followers_count':g_user.followers_count, 'permalink':g_user.permalink};
-    graph.nodes.unshift(currentNode);
+    // currentNode = {'id':g_user.id, 'followers_count':g_user.followers_count, 'permalink':g_user.permalink};
+    // graph.nodes.unshift(currentNode);
 
     // Dimensions
     var width = window.innerWidth-300;
@@ -82,6 +85,9 @@
                 return "var(--accent)";
             }
             else{
+                if(d.followers_count < g_settings.follower_slider.min || d.followers_count > g_settings.follower_slider.max){
+                    return "var(--light-3)";
+                }
                 return colorScale(d.followers_count);
             } 
         })

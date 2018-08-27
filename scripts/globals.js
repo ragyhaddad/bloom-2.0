@@ -15,8 +15,7 @@ var g_user = {
 	followers_count:null,
 	followings: [],
 	tracks: [],
-	likes: [],
-	graph_nodes: []
+	likes: []
 };
 
 /**

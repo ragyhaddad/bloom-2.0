@@ -2,7 +2,7 @@
  *	Change to debug.
  * 	- No load in animation
  */
-var debug = false;
+var debug = true;
 
 /**
  *	Stores data about the current user.
@@ -15,8 +15,17 @@ var g_user = {
 	followers_count:null,
 	followings: [],
 	tracks: [],
-	likes: []
+	likes: [],
+	graph_nodes: []
 };
+
+/**
+ *	Stores data about the graph.
+ */ 
+var g_graph = {
+	nodes: [],
+	links: []
+}
 
 /**
  *	Stores data about the settings.

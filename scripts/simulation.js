@@ -5,43 +5,49 @@
  function drawGraph(){
     // D3 Variables
     var graphLinks = [];
-    var colorArray = ["#616468", "#765F62", "#8B5A5C", "#A05557", "#B55051", "#CA4B4C", "#DF4646", "#F44141"];
+    
+    // Parsing links
+    // for (var x = 0; x < g_user.followings.length; x++){
+    //     var link = {
+    //         'source': g_user.permalink,
+    //         'target':g_user.followings[x].permalink,
+    //         'value': Math.round(Math.random()*9)
+    //     }
+    //     graphLinks.push(link);
+    // }
 
-    // Data Parsing
-    for (var x = 0; x < g_user.followings.length; x++){
-        var link = {
-            'source': g_user.permalink,
-            'target':g_user.followings[x].permalink,
-            'value': Math.round(Math.random()*9),
-            
-        }
-        graphLinks.push(link);
-    }
     var graph = {
-        'nodes' : g_user.followings,
+        'nodes' : g_graph.nodes,
         'links' : graphLinks
     }
-
-    /**
-     *  This function was causing drawGraph to break during settings.
-     */
-    // Unshift source node to the beginning of the array.
-    // Avoiding adding links to center node.
-    // currentNode = {'id':g_user.id, 'followers_count':g_user.followers_count, 'permalink':g_user.permalink};
-    // graph.nodes.unshift(currentNode);
 
     // Dimensions
     var width = window.innerWidth-300;
     var height = window.innerHeight;
 
-    // Scales
+    // Finding range of followers
+    var maxFollowers = 0;
+    var minFollowers = g_user.followings[0].followers_count; 
+    g_user.followings.forEach(element => {
+        console.log(element);
+        if(element.followers_count > maxFollowers){
+            maxFollowers = element.followers_count;
+        }
+        if(element.followers_count < minFollowers){
+            minFollowers = element.followers_count;
+        }
+    });
+
+    // Color scale
+    var colorArray = ["#616468", "#765F62", "#8B5A5C", "#A05557", "#B55051", "#CA4B4C", "#DF4646", "#F44141"];
     var colorScale = d3.scaleQuantize()
-        .domain([0, 10000000])
+        .domain([minFollowers, maxFollowers])
         .range(colorArray);
-    var radiusScale = d3.scalePow();
-        radiusScale
+
+    // Size scale
+    var radiusScale = d3.scalePow()
         .exponent(0.2)
-        .domain([0, 10000000])
+        .domain([minFollowers, maxFollowers])
         .range([4, 17]);
 
     // Zoom Options

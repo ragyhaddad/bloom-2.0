@@ -29,7 +29,8 @@ function closeSettings(){
 function adjustSettings() {
   var range = slider.noUiSlider.get();
   if (g_settings.follower_slider.min != range[0] || g_settings.follower_slider.max != range[1]) {
-		d3.select('.main-svg').remove();
+    d3.select('.main-svg').remove();
+    d3.select('.tooltip').remove();
     g_settings.follower_slider.min = range[0];
     g_settings.follower_slider.max = range[1];
 		drawGraph();

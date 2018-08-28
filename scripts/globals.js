@@ -2,7 +2,7 @@
  *	Change to debug.
  * 	- No load in animation
  */
-var debug = true;
+var debug = false;
 
 /**
  *	Stores data about the current user.
@@ -49,14 +49,16 @@ var g_cache = {
  */
 var g_weekly = {
 	featured_artists: [
+		'joshpan',
+		'itsasymmetric',
 		'ragyhaddad',
 		'im-seb',
-    'itsasymmetric'
+		'kazdotmoon'
 	],
 	featured_labels: [
 		'astronautico',
 		'nightowlcollective',
-    'soulection'
+		'soulection'
 	],
 	track_of_week: '279989691'
 }

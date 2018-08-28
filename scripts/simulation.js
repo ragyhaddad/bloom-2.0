@@ -69,6 +69,11 @@
         .attr('height','100%')
         .on('zoom',zoomed)
 
+    // Creating tooltip
+    var tooltip = d3.select('.data-display').append('div')
+        .attr('class', 'tooltip')
+        .style('opacity', 0);
+
     // Adding nodes
     var nodes = svg.append('g')
         .attr('class','nodes')
@@ -77,6 +82,14 @@
         .enter()
         .append('circle')
         .attr('class','node')
+        .attr('class', function(d){
+            if(d.id == g_user.id || d.followers_count > g_settings.follower_slider.min && d.followers_count < g_settings.follower_slider.max){
+                return 'node-active';
+            }
+            else{
+                return 'node-unactive';
+            }
+        })
         .attr('r',function(d){
             if (d.id == g_user.id) {
                 return 15;
@@ -100,9 +113,31 @@
             return 'var(--light-2)';
         })
         .attr('onclick',function(d){
-                return `fetchUser("${d.permalink}")`;
-            }    
-        )
+            return `fetchUser("${d.permalink}")`;
+        })
+        .on('mouseover', (d) => {
+            if(d.id == g_user.id || d.followers_count > g_settings.follower_slider.min && d.followers_count < g_settings.follower_slider.max){
+                tooltip.transition()
+                    .duration(0)
+                    .style('opacity', .9);
+                tooltip.html('<p>'+d.username+'</p><p class="tooltip-subtext">'+parseCount(d.followers_count)+'</p>')
+                    .style('left', (d3.event.clientX)+'px')
+                    .style('top', (d3.event.clientY - 50)+'px');
+            }
+        })
+        .on('mousemove', (d) => {
+            if(d.id == g_user.id || d.followers_count > g_settings.follower_slider.min && d.followers_count < g_settings.follower_slider.max){
+                tooltip.style('left', (d3.event.clientX)+'px')
+                    .style('top', (d3.event.clientY - 50)+'px');
+            }
+        })
+        .on('mouseout', (d) => {
+            if(d.id == g_user.id || d.followers_count > g_settings.follower_slider.min && d.followers_count < g_settings.follower_slider.max){
+                tooltip.transition()
+                    .duration(0)
+                    .style('opacity', 0);
+            }
+        })
        
     // Adding links 
     var links = svg.append("g")

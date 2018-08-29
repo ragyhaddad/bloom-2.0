@@ -1,9 +1,4 @@
-# bloom-2.0
-#### fetch.js
-Example Usage:
-```javascript
-var f = new Fetch();
-f.fetchUser('flume');
-console.log(g_user);
-f.fetchLikes('flume');
-```
+# Bloom v2
+Bloom is a web application build in Vanilla JavaScript and D3.js that allows for a intuitive and interactive music discovery experience.
+---
+[Bloom](http://bloommusic.us)

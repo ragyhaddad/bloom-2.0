@@ -26,6 +26,7 @@ function loadInterface(){
 function clearInterface(){
 	d3.select('.main-svg').remove();
 	d3.select('.tooltip').remove();
+	$('.click-blocker').css('display', 'block');
 	// Hide elements
 	hideInterface();
 	// Clear elements

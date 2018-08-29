@@ -3,6 +3,4 @@
 
 Visit the app here: [bloommusic.us](http://bloommusic.us)
 
-#### Lead Developers:
- - [Sebastian Wetzel](https://github.com/swetzel)
- - [Ragy Haddad](https://github.com/ragyhaddad)
+#### Developers: [Ragy Haddad](https://github.com/ragyhaddad), [Sebastian Wetzel](https://github.com/swetzel)

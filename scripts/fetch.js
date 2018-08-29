@@ -142,19 +142,19 @@ function getFavorites(){
         "stillwoozy",
         "kaytranada",
         "polo-pan",
-        "flamingosis",
+        // "flamingosis",
         "masegomusic",
         "harvey-sutherland",
         "phazzmusic",
         "bobby-analog",
         "kerokerobonito",
         "giraffage",
-        "starro",
+        // "starro",
         "ofwgkta-official",
         "tommisch",
         "noname",
         "mujobeatz",
-        "astronautico",
+        // "astronautico",
         "phonogramme"
     ];
     let randomUser = favorites[Math.floor(Math.random() * favorites.length)];

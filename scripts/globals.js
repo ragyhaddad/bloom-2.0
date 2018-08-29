@@ -49,15 +49,11 @@ var g_cache = {
  */
 var g_weekly = {
 	featured_artists: [
-		'joshpan',
-		'itsasymmetric',
-		'ragyhaddad',
-		'im-seb',
-		'kazdotmoon'
+		'kazdotmoon',
+		'officialmedasin'
 	],
 	featured_labels: [
-		'astronautico',
-		'nightowlcollective',
+		'owslaofficial',
 		'soulection'
 	],
 	track_of_week: '279989691'

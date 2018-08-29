@@ -34,8 +34,14 @@
 body{
 	background: var(--light-2);
 	overflow: hidden;
+	animation: fade 0s 0.25s ease-in backwards;
 }
 
 p{
 	font-size: 16px;
+}
+
+@keyframes fade{
+	from{ opacity: 0; }
+	to{ opacity: 1; }
 }

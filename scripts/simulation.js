@@ -170,5 +170,7 @@
     }
 
     // Attach Zoom to SVG after rendering
-    svg.call(zoom);   
+    svg.call(zoom);  
+    
+    $('.click-blocker').css('display', 'none');
 } 

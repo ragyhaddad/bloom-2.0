@@ -43,8 +43,8 @@
 }
 .search-button-2{
 	position: absolute;
-	right: 9px;
-	top: 9px;
+	right: 8px;
+	top: 8px;
 	z-index: 105;
 }
 .search-button-2:hover{

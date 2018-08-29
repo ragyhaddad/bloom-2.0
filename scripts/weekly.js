@@ -43,6 +43,6 @@ function loadFeaturedLabels(){
 loadFeaturedLabels();
 
 function loadTrackOfWeek(){
-    $('.track-of-week')[0].innerHTML = `<iframe width="260" height="180" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${g_weekly.track_of_week}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>`;
+    $('.track-of-week')[0].innerHTML = `<iframe width="260" height="160" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${g_weekly.track_of_week}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>`;
 }
 loadTrackOfWeek();

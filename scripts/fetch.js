@@ -25,6 +25,7 @@ function fetchUser(username){
 	    g_user.tracks = [];
         g_user.likes = [];
         g_graph.nodes = [];
+        g_graph.nodes_sorted = [];
         fetchTracks(user.id);
         fetchFollowings(`https://api.soundcloud.com/users/${user.id}/followings?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd&limit=200`);
         fetchLikes(user.id);
@@ -55,8 +56,25 @@ function fetchFollowings(url){
                     username: g_user.username,
                     followers_count: g_user.followers_count
                 });
+                g_graph.nodes_sorted.push({
+                    id: g_user.id,
+                    permalink: g_user.permalink,
+                    username: g_user.username,
+                    followers_count: g_user.followers_count
+                })
                 g_user.followings.forEach(user => {
                     g_graph.nodes.push({
+                        id: user.id,
+                        permalink: user.permalink,
+                        username: user.username,
+                        followers_count: user.followers_count
+                    });
+                });
+                g_user.followings.sort(function(a, b){
+                    return a.followers_count < b.followers_count;
+                });
+                g_user.followings.forEach(user => {
+                    g_graph.nodes_sorted.push({
                         id: user.id,
                         permalink: user.permalink,
                         username: user.username,

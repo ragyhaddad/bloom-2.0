@@ -27,14 +27,13 @@ function closeSettings(){
  *   Adjusting settings on close of settings modal.
  */
 function adjustSettings() {
+  d3.select('.main-svg').remove();
+  d3.select('.tooltip').remove();
   var range = slider.noUiSlider.get();
-  if (g_settings.follower_slider.min != range[0] || g_settings.follower_slider.max != range[1]) {
-    d3.select('.main-svg').remove();
-    d3.select('.tooltip').remove();
-    g_settings.follower_slider.min = range[0];
-    g_settings.follower_slider.max = range[1];
-		drawGraph();
-  }
+  g_settings.follower_slider.min = range[0];
+  g_settings.follower_slider.max = range[1];
+  g_settings.sort = $('.sort-box')[0].checked;
+  drawGraph();
 }
 
 /*

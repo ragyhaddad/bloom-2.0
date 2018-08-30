@@ -16,9 +16,16 @@
         graphLinks.push(link);
     }
 
-    var graph = {
-        'nodes' : g_graph.nodes,
-        'links' : graphLinks
+    if(g_settings.sort){
+        var graph = {
+            'nodes' : g_graph.nodes_sorted,
+            'links' : graphLinks
+        }
+    }else{
+        var graph = {
+            'nodes' : g_graph.nodes,
+            'links' : graphLinks
+        }
     }
 
     // Dimensions

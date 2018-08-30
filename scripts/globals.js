@@ -2,7 +2,7 @@
  *	Change to debug.
  * 	- No load in animation
  */
-var debug = false;
+var debug = true;
 
 /**
  *	Stores data about the current user.
@@ -23,7 +23,8 @@ var g_user = {
  */ 
 var g_graph = {
 	nodes: [],
-	links: []
+	links: [],
+	nodes_sorted: []
 }
 
 /**
@@ -33,7 +34,8 @@ var g_settings = {
 	follower_slider: {
 		min: 0,
 		max: 10000000
-	}
+	},
+	sort: false
 }
 
 /**

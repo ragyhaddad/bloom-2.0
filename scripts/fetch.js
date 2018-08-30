@@ -114,7 +114,7 @@ function fetchLikes(user_id){
     //let url = `https://api-v2.soundcloud.com/users/${user_id}/likes?client_id=eiY2lrXv0r5RR6UXfyjrfdwxzmgKqreK&limit=20&offset=0&linked_partitioning=1&app_version=1528191385&app_locale=en`;
     //var full_url = proxy + url;
     //Proxy 
-    fetch('http://35.237.28.211/proxy-likes/' +user_id)
+    fetch('https://www.bloom-api.online/proxy-likes/' +user_id)
         .then((response)=>{
             return response.json();
         })

@@ -2,7 +2,7 @@
  *	Change to debug.
  * 	- No load in animation
  */
-var debug = true;
+var debug = false;
 
 /**
  *	Stores data about the current user.
@@ -56,7 +56,8 @@ var g_weekly = {
 	],
 	featured_labels: [
 		'owslaofficial',
-		'soulection'
+		'soulection',
+		'lobster-theremin'
 	],
 	track_of_week: '279989691'
 }

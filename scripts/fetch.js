@@ -133,15 +133,13 @@ function fetchLikes(user_id){
 function getRandom(){
     let random = (Math.floor(Math.random() * 9999) + 1);
     fetch(`https://api.soundcloud.com/users/${random}?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd`)
-        .then(
-            function(response) {
-                if (response.status !== 200) {
-                    getRandom();
-                }else{
-                    return response.json();
-                }
-              }
-        )
+        .then((response) => {
+            if (response.status !== 200) {
+                getRandom();
+            }else{
+                return response.json();
+            }
+        })
         .then((user) => {
             fetchUser(user.permalink);
         });

@@ -110,11 +110,11 @@ function fetchTracks(user_id){
  *  @param {int} user_id
  */
 function fetchLikes(user_id){
-    //let proxy = 'https://cors-anywhere.herokuapp.com/';
-    //let url = `https://api-v2.soundcloud.com/users/${user_id}/likes?client_id=eiY2lrXv0r5RR6UXfyjrfdwxzmgKqreK&limit=20&offset=0&linked_partitioning=1&app_version=1528191385&app_locale=en`;
-    //var full_url = proxy + url;
+    let proxy = 'https://cors-anywhere.herokuapp.com/';
+    let url = `https://api-v2.soundcloud.com/users/${user_id}/likes?client_id=eiY2lrXv0r5RR6UXfyjrfdwxzmgKqreK&limit=20&offset=0&linked_partitioning=1&app_version=1528191385&app_locale=en`;
+    var full_url = proxy + url;
     //Proxy 
-    fetch('https://www.bloom-api.online/proxy-likes/' +user_id)
+    fetch(full_url)
         .then((response)=>{
             return response.json();
         })

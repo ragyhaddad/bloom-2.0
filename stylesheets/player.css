@@ -5,8 +5,18 @@
 	transform: translate3d(0px, 240px, 0px);
 	opacity: 0;
 	transition: transform 0.5s, opacity 0.5s;
-	z-index: 10;
+	z-index: 3;
 }
 .player iframe{
 	margin-bottom: -3px;
+}
+@media (max-width: 845px){
+	.player{
+		bottom: 160px;
+		left: 20px;
+	}
+	.player iframe{
+		width: calc(100vw - 40px);
+		height: 150px;
+	}
 }

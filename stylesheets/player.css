@@ -5,7 +5,7 @@
 	transform: translate3d(0px, 240px, 0px);
 	opacity: 0;
 	transition: transform 0.5s, opacity 0.5s;
-	z-index: 3;
+	z-index: 10;
 }
 .player iframe{
 	margin-bottom: -3px;
@@ -14,6 +14,7 @@
 	.player{
 		bottom: 160px;
 		left: 20px;
+		z-index: 3;
 	}
 	.player iframe{
 		width: calc(100vw - 40px);

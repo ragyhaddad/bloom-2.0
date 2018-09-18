@@ -2,7 +2,7 @@
  *	Change to debug.
  * 	- No load in animation
  */
-var debug = true;
+var debug = false;
 
 /**
  *	Stores data about the current user.

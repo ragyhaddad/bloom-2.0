@@ -29,8 +29,15 @@
     }
 
     // Dimensions
-    var width = window.innerWidth-300;
-    var height = window.innerHeight;
+    var width;
+    var height;
+    if(window.innerWidth < 845){
+        width = window.innerWidth-(window.innerWidth/10);
+        height = window.innerHeight-85;
+    }else{
+        width = window.innerWidth-300;
+        height = window.innerHeight;
+    }
 
     // Finding range of followers
     var maxFollowers = -1;

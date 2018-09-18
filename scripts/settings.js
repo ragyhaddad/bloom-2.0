@@ -54,5 +54,10 @@ noUiSlider.create(slider, {
 });
 slider.noUiSlider.on('update', () => {
   var range = slider.noUiSlider.get();
-  $(".settings-count")[0].innerHTML = parseCountNum(range[0]) + " - " + parseCountNum(range[1]) + " Followers";
+  if(window.innerWidth < 845){
+    $(".settings-count")[0].innerHTML = parseCountNum(range[0]) + " - " + parseCountNum(range[1]);
+  }else{
+    $(".settings-count")[0].innerHTML = parseCountNum(range[0]) + " - " + parseCountNum(range[1]) + " Followers";
+  }
+  
 });

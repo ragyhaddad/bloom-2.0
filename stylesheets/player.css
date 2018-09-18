@@ -10,3 +10,14 @@
 .player iframe{
 	margin-bottom: -3px;
 }
+@media (max-width: 845px){
+	.player{
+		bottom: 160px;
+		left: 20px;
+		z-index: 3;
+	}
+	.player iframe{
+		width: calc(100vw - 40px);
+		height: 150px;
+	}
+}

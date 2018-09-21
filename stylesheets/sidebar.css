@@ -26,6 +26,7 @@
 	transition: opacity 0.25s;
 	cursor: pointer;
 }
+
 .user-image{
 	width: 90px;
 	height: 90px;
@@ -33,21 +34,6 @@
 	margin-bottom: 15px;
 	margin-top: 30px;
 	cursor: pointer;
-}
-@media (max-width: 845px){
-	.user-image{
-		width: 65px;
-		height: 65px;
-		float: left;
-		margin: 10px 15px;
-		margin-top: -10px;
-	}
-	.user-info{
-		text-align: left;
-	}
-	.user-name{
-		margin-top: 20px;
-	}
 }
 .user-name{
 	margin-bottom: 4px;
@@ -64,6 +50,39 @@
 	font-weight: lighter;
 	cursor: pointer;
 }
+.user-info-fade{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: transparent;
+	display: none;
+	height: 85px;
+	width: 125px;
+	z-index: 11;
+	box-shadow: inset -125px 0px 50px -30px var(--light);
+}
+@media (max-width: 845px){
+	.user-image{
+		width: 65px;
+		height: 65px;
+		float: left;
+		margin: 10px 15px;
+		margin-top: -10px;
+	}
+	.user-info{
+		text-align: left;
+	}
+	.user-name{
+		margin-top: 20px;
+		width: 50000px;
+	}
+	.user-followers{
+		margin-bottom: 0px;
+	}
+	.user-info-fade{
+		display: block;
+	}
+}
 
 .user-tracks{
 	position: relative;
@@ -77,7 +96,12 @@
 @media (max-width: 845px){
 	.user-tracks{
 		background: pink;
-		height: 0;
+		position: fixed;
+		bottom: 0px;
+		margin: 0px;
+		width: calc(100vw - 40px);
+		padding: 10px 20px;
+		visibility: hidden;
 	}
 }
 .user-tracks li{
@@ -121,4 +145,17 @@
 	z-index: 11;
 	box-shadow: inset -40px 0px 20px -20px var(--light);
 	pointer-events: none;
+}
+
+.open-track-button{
+	height: 40px;
+	width: 40px;
+	background: pink;
+	position: absolute;
+	right: 15px;
+	top: 23px;
+	z-index: 12;
+}
+.burger{
+
 }

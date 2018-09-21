@@ -10,20 +10,20 @@
 	overflow-y: scroll;
 	opacity: 0;
 	transform: translate3d(-40px, 0px, 0px);
-	transition: transform 1s, opacity 1s;
+	transition: transform 1s, opacity 1s, height 0.25s;
 	box-shadow: 0px 2px 0px #d1d2d9;
 }
 @media (max-width: 845px){
 	.user{
 		width: calc(100% - 40px);
-		border-radius: 0px;
 		height: 85px;
+		overflow: hidden;
 	}
 }
 
 .user-info{
 	text-align: center;
-	transition: opacity 0.25s;
+	transition: opacity 0.25s, transform 0.25s;
 	cursor: pointer;
 }
 
@@ -71,9 +71,10 @@
 	}
 	.user-info{
 		text-align: left;
+		padding-top: 20px;
 	}
 	.user-name{
-		margin-top: 20px;
+		margin-top: 2px;
 		width: 50000px;
 	}
 	.user-followers{
@@ -85,23 +86,23 @@
 }
 
 .user-tracks{
-	position: relative;
+	position: absolute;
 	overflow: hidden;
 	width: 190px;
 	margin: auto;
 	list-style-type: none;
 	margin-bottom: 20px;
-	transition: opacity 0.25s;
+	transition: opacity 0.25s, transform 0.25s;
 }
 @media (max-width: 845px){
 	.user-tracks{
-		background: pink;
-		position: fixed;
-		bottom: 0px;
-		margin: 0px;
-		width: calc(100vw - 40px);
+		background: var(--light);
+		width: calc(100vw - 60px);
 		padding: 10px 20px;
-		visibility: hidden;
+		padding-top: 5px;
+		z-index: 14;
+		position: absolute;
+		top: 85px;
 	}
 }
 .user-tracks li{
@@ -148,14 +149,22 @@
 }
 
 .open-track-button{
-	height: 40px;
-	width: 40px;
-	background: pink;
+	height: 85px;
+	width: 85px;
 	position: absolute;
-	right: 15px;
-	top: 23px;
+	right: 0px;
+	top: 0px;
 	z-index: 12;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	opacity: 0.4;
+	cursor: pointer;
+	transition: transform 0.25s;
 }
-.burger{
-
+@media (max-width: 845px){
+	.open-track-button{
+		display: flex;
+	}
 }

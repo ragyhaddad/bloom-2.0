@@ -10,13 +10,14 @@
 	overflow-y: scroll;
 	opacity: 0;
 	transform: translate3d(-40px, 0px, 0px);
-	transition: transform 1s, opacity 1s, height 0.25s;
+	transition: transform 1s, opacity 1s, max-height 0.25s;
 	box-shadow: 0px 2px 0px #d1d2d9;
 }
 @media (max-width: 845px){
 	.user{
 		width: calc(100% - 40px);
-		height: 85px;
+		height: 100%;
+		max-height: 85px;
 		overflow: hidden;
 	}
 }

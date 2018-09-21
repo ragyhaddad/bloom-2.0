@@ -144,7 +144,7 @@ let tracksOpen = false;
 function openTracks(){
 	if(tracksOpen){
 		$('.open-track-button').css('transform', 'rotate(0deg)');
-		$('.user').css('height', '85px');
+		$('.user').css('max-height', '85px');
 		if(playerOpen){
 			$('.player').css('transform', 'translate3d(0px, 0px, 0px)');
 		}else{
@@ -153,7 +153,7 @@ function openTracks(){
 		tracksOpen = false;
 	}else{
 		$('.open-track-button').css('transform', 'rotate(-180deg)');
-		$('.user').css('height', '210px');
+		$('.user').css('max-height', '210px');
 		if(playerOpen){
 			$('.player').css('transform', 'translate3d(0px, -78px, 0px)');
 		}

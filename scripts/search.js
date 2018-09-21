@@ -36,7 +36,7 @@ function searchInput(searchTerm){
 	var proxy = 'https://cors-anywhere.herokuapp.com/';
 	var url = 'https://api-v2.soundcloud.com/search/users?q=' + searchTerm + '&sc_a_id=1331a031-e3c8-415e-894d-f1458fcbe40a&variant_ids=1053&facet=place&user_id=851332-319840-3643-205054&client_id=lj8dF0xi5RcKDD1dLa6IOY6orLH3uBJW&limit=10&offset=0&linked_partitioning=1&app_version=1527169554&app_locale=en';
 	var fullurl = proxy + url;
-	fetch(fullurl)
+	fetch('https://www.bloom-api.online/proxy-search/' + searchTerm)
 	  .then((response) => {
 			return response.json();
 	  })

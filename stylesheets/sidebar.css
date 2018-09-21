@@ -10,22 +10,23 @@
 	overflow-y: scroll;
 	opacity: 0;
 	transform: translate3d(-40px, 0px, 0px);
-	transition: transform 1s, opacity 1s;
+	transition: transform 1s, opacity 1s, height 0.25s;
 	box-shadow: 0px 2px 0px #d1d2d9;
 }
 @media (max-width: 845px){
 	.user{
 		width: calc(100% - 40px);
-		border-radius: 0px;
 		height: 85px;
+		overflow: hidden;
 	}
 }
 
 .user-info{
 	text-align: center;
-	transition: opacity 0.25s;
+	transition: opacity 0.25s, transform 0.25s;
 	cursor: pointer;
 }
+
 .user-image{
 	width: 90px;
 	height: 90px;
@@ -33,21 +34,6 @@
 	margin-bottom: 15px;
 	margin-top: 30px;
 	cursor: pointer;
-}
-@media (max-width: 845px){
-	.user-image{
-		width: 65px;
-		height: 65px;
-		float: left;
-		margin: 10px 15px;
-		margin-top: -10px;
-	}
-	.user-info{
-		text-align: left;
-	}
-	.user-name{
-		margin-top: 20px;
-	}
 }
 .user-name{
 	margin-bottom: 4px;
@@ -64,20 +50,59 @@
 	font-weight: lighter;
 	cursor: pointer;
 }
+.user-info-fade{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: transparent;
+	display: none;
+	height: 85px;
+	width: 125px;
+	z-index: 11;
+	box-shadow: inset -125px 0px 50px -30px var(--light);
+}
+@media (max-width: 845px){
+	.user-image{
+		width: 65px;
+		height: 65px;
+		float: left;
+		margin: 10px 15px;
+		margin-top: -10px;
+	}
+	.user-info{
+		text-align: left;
+		padding-top: 20px;
+	}
+	.user-name{
+		margin-top: 2px;
+		width: 50000px;
+	}
+	.user-followers{
+		margin-bottom: 0px;
+	}
+	.user-info-fade{
+		display: block;
+	}
+}
 
 .user-tracks{
-	position: relative;
+	position: absolute;
 	overflow: hidden;
 	width: 190px;
 	margin: auto;
 	list-style-type: none;
 	margin-bottom: 20px;
-	transition: opacity 0.25s;
+	transition: opacity 0.25s, transform 0.25s;
 }
 @media (max-width: 845px){
 	.user-tracks{
-		background: pink;
-		height: 0;
+		background: var(--light);
+		width: calc(100vw - 60px);
+		padding: 10px 20px;
+		padding-top: 5px;
+		z-index: 14;
+		position: absolute;
+		top: 85px;
 	}
 }
 .user-tracks li{
@@ -121,4 +146,25 @@
 	z-index: 11;
 	box-shadow: inset -40px 0px 20px -20px var(--light);
 	pointer-events: none;
+}
+
+.open-track-button{
+	height: 85px;
+	width: 85px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 12;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	opacity: 0.4;
+	cursor: pointer;
+	transition: transform 0.25s;
+}
+@media (max-width: 845px){
+	.open-track-button{
+		display: flex;
+	}
 }

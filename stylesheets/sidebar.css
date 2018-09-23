@@ -4,6 +4,7 @@
 	left: 20px;
 	width: 250px;
 	height: 325px;
+	max-height: 325px;
 	background: var(--light);
 	border-radius: 2px;
 	z-index: 10;
@@ -94,6 +95,7 @@
 	list-style-type: none;
 	margin-bottom: 20px;
 	transition: opacity 0.25s, transform 0.25s;
+	margin-left: 30px; 
 }
 @media (max-width: 845px){
 	.user-tracks{
@@ -104,6 +106,7 @@
 		z-index: 14;
 		position: absolute;
 		top: 85px;
+		margin-left: 0px; 
 	}
 }
 .user-tracks li{

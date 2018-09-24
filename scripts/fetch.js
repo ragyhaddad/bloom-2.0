@@ -151,29 +151,32 @@ function getRandom(){
  *  Handles the favorites button.
  */
 function getFavorites(){
+    // let favorites = [
+    //     "ragyhaddad",
+    //     "im-seb",
+    //     "fkj-2",
+    //     "samgellaitry",
+    //     "soulection",
+    //     "stillwoozy",
+    //     "kaytranada",
+    //     "polo-pan",
+    //     // "flamingosis",
+    //     "masegomusic",
+    //     // "harvey-sutherland",
+    //     "phazzmusic",
+    //     // "bobby-analog",
+    //     "kerokerobonito",
+    //     "giraffage",
+    //     // "starro",
+    //     "ofwgkta-official",
+    //     "tommisch",
+    //     "noname",
+    //     "mujobeatz",
+    //     // "astronautico",
+    //     "phonogramme"
+    // ];
     let favorites = [
-        "ragyhaddad",
-        "im-seb",
-        "fkj-2",
-        "samgellaitry",
-        "soulection",
-        "stillwoozy",
-        "kaytranada",
-        "polo-pan",
-        // "flamingosis",
-        "masegomusic",
-        // "harvey-sutherland",
-        "phazzmusic",
-        // "bobby-analog",
-        "kerokerobonito",
-        "giraffage",
-        // "starro",
-        "ofwgkta-official",
-        "tommisch",
-        "noname",
-        "mujobeatz",
-        // "astronautico",
-        "phonogramme"
+        "flume"
     ];
     let randomUser = favorites[Math.floor(Math.random() * favorites.length)];
     fetchUser(randomUser);

@@ -42,6 +42,11 @@
 .search-buttons img:hover, .radio-button:hover, .player-button:hover{
 	transform: translate3d(0px, -3px, 0px);
 }
+@media (max-width: 845px){
+	.search-buttons{
+		bottom: 114px;
+	}
+}
 
 .back-button{
 	position: fixed;
@@ -51,6 +56,14 @@
 	opacity: 0;
 	transform: translate3d(-50px, 0px, 0px);
 	transition: transform 0.25s, opacity 0.25s;
+}
+@media (max-width: 845px){
+	.back-button{
+		left: auto;
+		bottom: auto;
+		top: 20px;
+		left: 20px;
+	}
 }
 .back-button img:hover{
 	transform: translate3d(3px, 0px, 0px);
@@ -69,6 +82,13 @@
 	display: block;
 	transition: transform 0.25s;
 }
+@media (max-width: 845px){
+	.player-buttons{
+		left: auto;
+		bottom: 114px;
+		right: 20px;
+	}
+}
 
 .extra-buttons{
 	position: fixed;
@@ -78,6 +98,12 @@
 	transform: translate3d(-20px, 0px, 0px);
 	opacity: 0;
 	transition: transform 1s, opacity 1s;
+}
+@media (max-width: 845px){
+	.extra-buttons{
+		right: 20px;
+		transform: translate3d(20px, 0px, 0px);
+	}
 }
 .mail-button{
 	position: absolute;

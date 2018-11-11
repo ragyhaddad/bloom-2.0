@@ -2,7 +2,7 @@
  *	Change to debug.
  * 	- No load in animation
  */
-var debug = false;
+var debug = 0;
 
 /**
  *	Stores data about the current user.
@@ -51,7 +51,7 @@ var g_cache = {
  */
 var g_weekly = {
 	featured_artists: [
-		'kazdotmoon',
+		'hanzbeats',
 		'officialmedasin',
 		'jinsangbeats'
 	],

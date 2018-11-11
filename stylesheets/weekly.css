@@ -12,6 +12,12 @@
 	transform: translate3d(40px, 0px, 0px);
 	transition: transform 1s, opacity 1s;
 }
+@media (max-width: 845px){
+	.weekly{
+		display: none;
+	}
+}
+
 
 .section-title{
 	font-size: 14px;
@@ -76,5 +82,4 @@
 	opacity: 0.75;
 	cursor: pointer;
 }
-
 

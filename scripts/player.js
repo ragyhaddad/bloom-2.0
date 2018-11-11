@@ -33,7 +33,11 @@ $('.player-button').on('click', () => {
  *	Open the media player.
  */
 function openPlayer(){
-	$('.player').css('transform', 'translate3d(0px, 0px, 0px)');
+	if(tracksOpen){
+		$('.player').css('transform', 'translate3d(0px, -78px, 0px)');
+	}else{
+		$('.player').css('transform', 'translate3d(0px, 0px, 0px)');
+	}
 	$('.player').css('opacity', '1');
 	playerOpen = true;
 }

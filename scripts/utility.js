@@ -46,3 +46,19 @@ function goBack(){
 	g_cache.user_history.pop();
 	fetchUser(g_cache.user_history.pop());
 }
+
+function tooManyFollowings(){
+	$('#fe-count')[0].innerHTML = g_user.followings_count;
+	$('.follower-error').css('display', 'block');
+	setTimeout(() => {
+		$('.follower-error').css('opacity', '1');
+		$('.follower-error').css('transform', 'translate3d(0px, 0px, 0px)');
+	}, 0);
+	setTimeout(() => {
+		$('.follower-error').css('opacity', '0');
+		$('.follower-error').css('transform', 'translate3d(-10px, 0px, 0px)');
+	}, 3000);
+	setTimeout(() => {
+		$('.follower-error').css('display', 'none');
+	}, 3250);  
+}

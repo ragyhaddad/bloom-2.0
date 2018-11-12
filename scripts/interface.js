@@ -7,13 +7,17 @@ function loadInterface(){
 	$('.user-name')[0].innerHTML = g_user.username;
 	$('.user-followers')[0].innerHTML = parseCount(g_user.followers_count);
 	let tracks_html = `<div class="tracks-fade"></div>`;
-	g_user.tracks.forEach(track => {
-		tracks_html += 
-			`<li onclick="playTrack(${track.id})">` +
-				`<img src="./images/play-button.svg">` +
-				`<p>${track.title}</p>` +
-			`</li>`;
-	});
+	if(g_user.tracks.length != 0){
+		g_user.tracks.forEach(track => {
+			tracks_html += 
+				`<li onclick="playTrack(${track.id})">` +
+					`<img src="./images/play-button.svg">` +
+					`<p>${track.title}</p>` +
+				`</li>`;
+		});
+	}else{
+		tracks_html += `<p class="no-tracks">No sounds<br>uploaded</p>`
+	}
 	$('.user-tracks')[0].innerHTML = tracks_html;
 	$('.current-user')[0].innerHTML = `<p>Showing who <span class="strong">${g_user.username}</span> follows.</p>`;
 	// Display elements
@@ -159,5 +163,4 @@ function openTracks(){
 		}
 		tracksOpen = true;
 	}
-	
 }

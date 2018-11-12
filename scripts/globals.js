@@ -12,7 +12,8 @@ var g_user = {
 	permalink:null,
 	username: null,
 	image: null,
-	followers_count:null,
+	followers_count: null,
+	followings_count: null,
 	followings: [],
 	tracks: [],
 	likes: []
@@ -60,6 +61,6 @@ var g_weekly = {
 		'soulection',
 		'lobster-theremin'
 	],
-	track_of_week: '279989691'
+	track_of_week: '521576448'
 }
 

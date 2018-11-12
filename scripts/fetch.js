@@ -21,6 +21,7 @@ function fetchUser(username){
         g_user.username = user.username;
         g_user.image = user.avatar_url;
         g_user.followers_count = user.followers_count;
+        g_user.followings_count = user.followings_count;
         g_user.followings = [];
 	    g_user.tracks = [];
         g_user.likes = [];
@@ -38,6 +39,7 @@ function fetchUser(username){
  *  @param {String} url
  */
 function fetchFollowings(url){
+    const limit = 400;
     fetch(url)
         .then((response)=>{
             return response.json();
@@ -46,7 +48,7 @@ function fetchFollowings(url){
             for (var i = 0; i < followings.collection.length; i++) {
                 g_user.followings.push(followings.collection[i]);
             }
-            if (followings.next_href != null){
+            if (followings.next_href != null && g_user.followings.length <= limit-200){
                 fetchFollowings(followings.next_href);
             }
             else{
@@ -81,6 +83,9 @@ function fetchFollowings(url){
                         followers_count: user.followers_count
                     });
                 });
+                if(g_user.followings_count > limit){
+                    tooManyFollowings();
+                }
                 drawGraph();
             }   
         }); 
@@ -133,15 +138,13 @@ function fetchLikes(user_id){
 function getRandom(){
     let random = (Math.floor(Math.random() * 9999) + 1);
     fetch(`https://api.soundcloud.com/users/${random}?client_id=3Goi9X5NOF7g1ofGbmYEkpveejwvlqjd`)
-        .then(
-            function(response) {
-                if (response.status !== 200) {
-                    getRandom();
-                }else{
-                    return response.json();
-                }
-              }
-        )
+        .then((response) => {
+            if (response.status !== 200) {
+                getRandom();
+            }else{
+                return response.json();
+            }
+        })
         .then((user) => {
             fetchUser(user.permalink);
         });
@@ -163,7 +166,7 @@ function getFavorites(){
         // "flamingosis",
         "masegomusic",
         // "harvey-sutherland",
-        "phazzmusic",
+        // "phazzmusic",
         // "bobby-analog",
         "kerokerobonito",
         "giraffage",
